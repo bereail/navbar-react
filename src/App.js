@@ -1,17 +1,33 @@
-import Home from "./Screens/Home";
-import Services from "./Screens/Services";
-import HowWeWork from "./Screens/HowWeWork";
-import Benefits from "./Screens/Benefits";
-import NavBar from "./Components/NavBar";
+import Inicio from "./Screens/Inicio";
 import React from "react";
+import { useState } from "react";
 import NavBar2 from "./Components/NavBar2";
+import Nosotros from "./Screens/Nosotros";
+import Contacto from "./Screens/Contacto";
+import NuestrosProductos from "./Screens/NuestrosProductos";
+
 
 function App() {
+  const [activeSection, setActiveSection] = useState('inicio');
+
+  const handleSectionChange = (section) => {
+    setActiveSection(section);
+  };
+
   return (
-    <div className="App">
-      <React.Fragment>
-        <NavBar2 />
-      </React.Fragment>
+    <div>   
+      <nav>
+        <button onClick={() => handleSectionChange('inicio')}>Inicio</button>
+        <button onClick={() => handleSectionChange('nuestrosProductos')}>Nuestros Productos</button>
+        <button onClick={() => handleSectionChange('sostenibilidad')}>Sostenibilidad</button>
+        <button onClick={() => handleSectionChange('comercializacion')}>Comercializacion</button>
+        <button onClick={() => handleSectionChange('nosotros')}>Nosotros</button>
+        <button onClick={() => handleSectionChange('contacto')}>Contacto</button>
+      </nav>
+      {activeSection === 'inicio' && <Inicio />}
+      {activeSection === 'contacto' && <NuestrosProductos />}
+      {activeSection === 'nosotros' && <Nosotros />}
+      {activeSection === 'contacto' && <Contacto />}
     </div>
   );
 }

@@ -14,22 +14,22 @@ const NavBar2 = () => {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+          <a class="nav-link active" aria-current="page" href="inicio">INICIO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">NUESTROS PRODUCTOS</a>
+          <a class="nav-link" href="nuestrosProductos">NUESTROS PRODUCTOS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">SOSTENIBILIDAD</a>
+          <a class="nav-link" href="sostenibilidad">SOSTENIBILIDAD</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">COMERCIALIZACIÓN</a>
+          <a class="nav-link" href="comercializacion">COMERCIALIZACIÓN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">NOSTROS</a>
+          <a class="nav-link" href="nosotros">NOSTROS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">CONTACTO</a>
+          <a class="nav-link" href="contacto">CONTACTO</a>
         </li>
       </ul>
     </div>
