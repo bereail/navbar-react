@@ -1,11 +1,13 @@
-import React from 'react'
+// src/screens/Nosotros.js
+import React from 'react';
 
-const Nosotros = () => {
+function Nosotros() {
   return (
-    <div id="nosotros">
-      <h1>Nosotros</h1>
-    </div>
-  )
+    <section>
+      <h2>Nosotros</h2>
+      <p>Información sobre nuestra empresa y misión.</p>
+    </section>
+  );
 }
 
-export default Nosotros
+export default Nosotros;

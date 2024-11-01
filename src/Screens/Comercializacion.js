@@ -2,9 +2,10 @@ import React from 'react'
 
 const Comercializacion = () => {
   return (
-    <div id="comercializacion">
-      <h1>Comercializacion</h1>
-    </div>
+    <section>
+      <h2>Página de comercializacion</h2>
+      <p>Bienvenido a la página principal.</p>
+    </section>
   )
 }
 

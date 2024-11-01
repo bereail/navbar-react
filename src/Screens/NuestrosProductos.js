@@ -1,11 +1,18 @@
-import React from 'react'
+import React from 'react';
+import styles from './NuestrosProductos.module.css';
+import Productos from '../Components/Productos';
+import ProductosCarrusel from '../Components/ProductosCarousel';
 
 const NuestrosProductos = () => {
   return (
-    <div id="nuestrosProductos">
-      <h1>Nuestros productos</h1>
-    </div>
-  )
-}
+    <section id="NuestrosProductos" className={styles.nuestrosProductosSection}>
+      <div className={styles.nuestrosProductosOverlay}></div> 
+      <div className={styles.nuestrosProductosContent}> 
+        <Productos />
+        <ProductosCarrusel />
+      </div>
+    </section>
+  );
+};
 
-export default NuestrosProductos
+export default NuestrosProductos;

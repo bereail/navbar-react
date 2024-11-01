@@ -1,0 +1,29 @@
+.navbar {
+    position: relative; /* Necesario para el uso de z-index */
+    z-index: 3; /* Asegura que el navbar esté encima de otros elementos */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con algo de transparencia */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra para un mejor efecto visual */
+}
+
+.navbar-brand img {
+    width: 120px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+.nav-link {
+    color: #007bff; /* Color de los enlaces */
+    transition: color 0.3s; /* Suaviza el cambio de color */
+}
+
+.nav-link:hover {
+    color: #0056b3; /* Color al pasar el mouse sobre los enlaces */
+}
+
+.nav-item.active .nav-link {
+    font-weight: bold; /* Hace el enlace activo más prominente */
+    color: #0056b3; /* Color del enlace activo */
+}
+
+.navbar-toggler {
+    border: none; /* Elimina el borde del botón */
+}

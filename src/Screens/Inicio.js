@@ -1,11 +1,18 @@
-import React from 'react'
+// src/screens/Inicio.js
+import React from 'react';
+import styles from './Inicio.module.css'; // Asegúrate de que la ruta sea correcta
 
-const Inicio = () => {
+function Inicio() {
   return (
-    <div id="inicio">
-      <h1>Inicio</h1>
-    </div>
-  )
+    <section className={styles.inicioSection}> {/* Cambiado de name a className */}
+      <div className={styles.inicioOverlay}></div> {/* Cambiado a styles.inicioOverlay */}
+      <div className={styles.inicioContent}> {/* Cambiado a styles.inicioContent */}
+        <h1>Bienvenido a Nuestra Página</h1>
+        <p>Explora nuestros productos y descubre más sobre nosotros.</p>
+        <a href="#NuestrosProductos" className={styles.inicioButton}>Ver Productos</a>
+      </div>
+    </section>
+  );
 }
 
-export default Inicio
+export default Inicio;
