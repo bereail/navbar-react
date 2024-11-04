@@ -1,0 +1,57 @@
+/* Sostenibilidad.module.css */
+
+
+  
+  .section {
+    padding: 60px 20px; /* Agrega espacio alrededor del contenido */
+    background-image: url('/src/assets/arboles.webp'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* La imagen cubrirá toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    color: #2e7d32;
+    position: relative;
+    min-height: 100vh; /* Asegura que la sección tenga el alto de la ventana */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra el contenido verticalmente */
+  }
+
+
+  .title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #1b5e20;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .infoContainer {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .infoBox {
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .infoBox:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  h3 {
+    color: #388e3c;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #4a4a4a;
+    line-height: 1.5;
+  }
+  
