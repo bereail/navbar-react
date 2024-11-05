@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import logo from '../assets/logo.jpg';
-import styles from '../Components/NavBar3.module.css';
+import logo from '../../assets/logo.jpg';
+import styles from './NavBar.module.css';
 
-const Navbar3 = () => {
+const Navbar = () => {
   return (
     <nav className={`${styles.navbar} navbar navbar-expand-lg fixed-top`}>
       <div className="container-fluid">
         <a className={`${styles['navbar-brand']}`} href="#Inicio">
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" className={`${styles.logo}`}/>
         </a>
         <button
           className="navbar-toggler"
@@ -90,4 +90,4 @@ const Navbar3 = () => {
   );
 };
 
-export default Navbar3;
+export default Navbar;

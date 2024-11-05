@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('../assets/inicioImg.png');
+    background-image: url('../../assets/inicioImg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

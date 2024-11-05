@@ -1,11 +1,11 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import cajoneEspecialesImg from '../assets/cajoneEspecialesImg.png';
-import contenedorEstandarUltrabox1200 from '../assets/contenedorEstandarUltraboxA1200.png';
-import contenedorOctogonalUltrabin1000 from '../assets/contenedorOctogonalUltrabin1000.png';
-import styles from './Productos.module.css'; // Importar estilos
+import cajoneEspecialesImg from '../../../assets/cajoneEspecialesImg.png';
+import contenedorEstandarUltrabox1200 from '../../../assets/contenedorEstandarUltraboxA1200.png';
+import contenedorOctogonalUltrabin1000 from '../../../assets/contenedorOctogonalUltrabin1000.png';
+import styles from './Carrusel.module.css'; 
 
-const ProductosCarrusel = () => {
+const Carrusel = () => {
   const productos = [
     {
       id: 1,
@@ -46,4 +46,4 @@ const ProductosCarrusel = () => {
   );
 }
 
-export default ProductosCarrusel;
+export default Carrusel;

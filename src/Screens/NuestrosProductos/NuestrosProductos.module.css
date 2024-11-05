@@ -1,0 +1,82 @@
+/* src/styles/NuestrosProductos.module.css */
+
+.section {
+    background-color: #f9f9f9;
+    /* Fondo suave */
+    padding: 40px 20px;
+    /* Espaciado interno */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    /* Sombra para darle relieve */
+    max-width: 800px;
+    /* Ancho máximo */
+    margin: 20px auto;
+    /* Centrando la sección */
+    color: #333;
+    /* Color de texto */
+    line-height: 1.6;
+    /* Espacio entre líneas */
+}
+
+.nuestrosProductosOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Para crear un efecto oscuro, si es necesario */
+    transition: background 0.3s ease-in-out;
+    /* Transición de suavizado */
+}
+
+.nuestrosProductosContent {
+    position: relative;
+    z-index: 1;
+    /* Asegura que el contenido esté por encima del overlay */
+    text-align: center;
+    /* Centra el texto dentro del contenido */
+    max-width: 800px;
+    /* Ancho máximo del contenido */
+    margin: 0 auto;
+    /* Centra el contenido */
+    padding: 20px;
+    /* Espaciado interno */
+}
+
+.nuestrosProductosContent h1 {
+    font-size: 3rem;
+    /* Tamaño del título */
+    color: #333;
+    /* Color del texto del título */
+    margin-bottom: 20px;
+    /* Espaciado inferior del título */
+}
+
+.nuestrosProductosContent p {
+    font-size: 1.25rem;
+    /* Tamaño del texto */
+    line-height: 1.6;
+    /* Altura de línea */
+    color: #333;
+    /* Color del texto */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .nuestrosProductosContent h1 {
+        font-size: 2rem;
+        /* Tamaño del título en móviles */
+    }
+
+    .nuestrosProductosSection {
+        padding: 50px 10px;
+        /* Menos espaciado en móviles */
+    }
+
+    .nuestrosProductosContent p {
+        font-size: 1rem;
+        /* Tamaño de texto en móviles */
+    }
+}

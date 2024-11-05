@@ -1,4 +1,3 @@
-// src/screens/Inicio.js
 import React from 'react';
 import styles from './Inicio.module.css'; // Asegúrate de que la ruta sea correcta
 

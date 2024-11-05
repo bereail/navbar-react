@@ -1,19 +1,20 @@
 import React from 'react';
-import Navbar3 from './Components/Navbar3';
-import Footer from './Components/Footer';
-import Inicio from './Screens/Inicio';
-import Nosotros from './Screens/Nosotros';
-import Contacto from './Screens/Contacto';
-import Sostenibilidad from './Screens/Sostenibilidad';
-import NuestrosProductos from './Screens/NuestrosProductos';
-import Comercializacion from './Screens/Comercializacion';
+import Navbar from './Components/Navbar/Navbar'
+import Footer from './Components/Footer/Footer';
+import Inicio from './Screens/Inicio/Inicio';
+import Nosotros from './Screens/Nosotros/Nosotros';
+import Contacto from './Screens/Contacto/Contacto';
+import Sostenibilidad from './Screens/Sostenibilidad/Sostenibilidad';
+import NuestrosProductos from './Screens/NuestrosProductos/NuestrosProductos'
+import Comercializacion from './Screens/Comercializacion/Comercializacion';
 import { Element } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 function App() {
   return (
-    <div className="App">
-      <Navbar3 /> {/* Navbar siempre visible */}
+    <div>
+      <Navbar /> {/* Navbar siempre visible */}
       <Element name="Inicio">
         <Inicio />
       </Element>

@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Productos.module.css'; 
-import cajoneEspecialesImg from '../assets/cajoneEspecialesImg.png'; // Importar la imagen correctamente
-import contenedorEstandarUltrabox1200 from '../assets/contenedorEstandarUltraboxA1200.png';
-import contenedorOctogonalUltrabin1000 from '../assets/contenedorOctogonalUltrabin1000.png'
+import cajoneEspecialesImg from '../../assets/cajoneEspecialesImg.png';
+import contenedorEstandarUltrabox1200 from '../../assets/contenedorEstandarUltraboxA1200.png';
+import contenedorOctogonalUltrabin1000 from '../../assets/contenedorOctogonalUltrabin1000.png'
 
 
 const Productos = () => {
