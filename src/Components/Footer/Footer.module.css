@@ -1,0 +1,16 @@
+.footer {
+    background-color: rgb(227, 245, 127); /* Color de fondo */
+    color: e3f57f; /* Color del texto */
+    text-align: center; /* Centrar el contenido */
+    padding: 20px 0; /* Espacio alrededor del texto */
+    font-size: 0.9rem; /* Tamaño del texto */
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: 0;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+  }
+  
+  .footer p {
+    margin: 0; /* Elimina el margen alrededor del texto */
+  }
+  
+

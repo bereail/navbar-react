@@ -3,10 +3,9 @@
   top: 0;
   width: 100%;
   z-index: 10;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
-  /* Opcional: sombra para darle efecto de elevación */
+  background-color: rgba(250, 192, 33, 0.5); /* Fondo blanco con 90% de opacidad */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
+  transition: background-color 0.3s ease; /* Transición suave para el fondo */
 }
 
 .logo {
