@@ -14,6 +14,11 @@
   
 .inicioContent {
     z-index: 2; /* Asegura que el contenido esté encima de la imagen */
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
   
 .inicioOverlay {
@@ -34,4 +39,10 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.inicioParagraph{
+    margin-top: 0.5em;
+    color: rgba(255, 255, 255, 0.75)
 }

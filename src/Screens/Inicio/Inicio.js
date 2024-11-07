@@ -7,7 +7,7 @@ function Inicio() {
       <div className={styles.inicioOverlay}></div> {/* Cambiado a styles.inicioOverlay */}
       <div className={styles.inicioContent}> {/* Cambiado a styles.inicioContent */}
         <h1>Bienvenido a Nuestra Página</h1>
-        <p>Explora nuestros productos y descubre más sobre nosotros.</p>
+        <p className={styles.inicioParagraph}>Explora nuestros productos y descubre más sobre nosotros</p>
         <a href="#NuestrosProductos" className={styles.inicioButton}>Ver Productos</a>
       </div>
     </section>

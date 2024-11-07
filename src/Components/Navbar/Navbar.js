@@ -5,11 +5,13 @@ import styles from './NavBar.module.css';
 
 const Navbar = () => {
   return (
-    <nav className={`${styles.navbar} navbar navbar-expand-lg fixed-top`}>
+    <nav className={`${styles.navbar} navbar navbar-expand-lg fixed-top `} >
       <div className="container-fluid">
+        
         <a className={`${styles['navbar-brand']}`} href="#Inicio">
           <img src={logo} alt="Logo" className={`${styles.logo}`}/>
         </a>
+        
         <button
           className="navbar-toggler"
           type="button"
@@ -19,9 +21,10 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"/>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+
+        <div className="collapse navbar-collapse justify-content-around" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link

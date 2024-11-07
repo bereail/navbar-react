@@ -7,10 +7,8 @@ import Carrusel from '../../Components/Productos/Carrusel/Carrusel';
 const NuestrosProductos = () => {
   return (
     <section id="NuestrosProductos" className={styles.section}>
-      <div className={styles.nuestrosProductosOverlay}>
-     
-        </div> 
-      <div className={styles.nuestrosProductosContent}> 
+        <h2 className={styles.title}>Nuestros Productos</h2>
+      <div className={styles.content}>
         <Productos />
         <Carrusel />
       </div>
