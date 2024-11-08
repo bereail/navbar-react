@@ -9,6 +9,7 @@ import NuestrosProductos from './Screens/NuestrosProductos/NuestrosProductos'
 import Comercializacion from './Screens/Comercializacion/Comercializacion';
 import { Element } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Ventajas from './Screens/Ventajas/Ventajas';
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
       </Element>
       <Element name="Comercializacion">
         <Comercializacion />
+      </Element>
+      <Element name="Ventajas">
+        <Ventajas />
       </Element>
       <Element name="Nosotros">
         <Nosotros />

@@ -69,6 +69,16 @@ const Navbar = () => {
             <li className="nav-item">
               <Link
                 className={`${styles['nav-link']} nav-link`}
+                to="Ventajas"
+                smooth={true}
+                duration={500}
+              >
+                VENTAJAS
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={`${styles['nav-link']} nav-link`}
                 to="Nosotros"
                 smooth={true}
                 duration={500}
