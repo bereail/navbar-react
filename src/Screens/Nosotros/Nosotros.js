@@ -4,7 +4,7 @@ import styles from './Nosotros.module.css';
 
 function Nosotros() {
   return (
-    <section className={styles.section}>
+    <section id="Nosotros" className={styles.section}>
       <h2>Nosotros</h2>
       <p>
         ULTRACOR SAS es una empresa especializada en la fabricación de envases especiales y en la creación de soluciones de packaging sostenible. Nuestros productos y servicios están diseñados para atender tanto al mercado local como al internacional, siempre con el objetivo de satisfacer las necesidades de un público diverso y exigente, y con un firme compromiso hacia la excelencia y la mejora continua.

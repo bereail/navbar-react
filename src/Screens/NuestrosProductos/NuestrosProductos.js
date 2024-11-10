@@ -6,7 +6,7 @@ import Carrusel from '../../Components/Productos/Carrusel/Carrusel';
 
 const NuestrosProductos = () => {
   return (
-    <section id="NuestrosProductos" className={styles.section}>
+    <section id="Nuestros Productos" className={styles.section}>
         <h2 className={styles.title}>Nuestros Productos</h2>
       <div className={styles.content}>
         <Productos />

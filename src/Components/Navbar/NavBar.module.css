@@ -1,59 +1,78 @@
+/* Navbar principal */
 .navbar {
   position: fixed;
-  font-size: 1.2rem;
-  top: 0;
+  top: 0px;
   width: 100%;
   z-index: 10;
-  transition: background-color 1s ease, box-shadow 1s ease;
-  color: white;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
   padding: 10px 0;
-  background-color: rgba(255, 165, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* Fondo transparente */
 .transparent {
   background-color: rgba(255, 165, 0, 0);
   box-shadow: none;
 }
 
+/* Fondo sólido */
 .solid {
-  background-color: rgba(255, 165, 0, 0.9);
+  background: linear-gradient(to right, rgba(255, 140, 0, 0.9), rgba(255, 200, 0, 0.9));
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Fondo verde cuando está en la sección de sostenibilidad */
+.green {
+  background-color: rgba(40, 167, 69, 0.9);
+  transition: background-color 0.5s ease;
+}
+
+/* Estilos del logo */
 .logo {
   height: 70px;
   width: 150px;
+  margin: 0 auto; /* Centra el logo */
+  display: block;
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Elimina cualquier borde */
+  box-shadow: none; /* Elimina cualquier sombra */
 }
 
+/* Contenedor de los enlaces */
 .navbar-nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* Centra los enlaces */
+  align-items: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
+/* Estilo de los enlaces de la navbar */
 .nav-link {
-  color: white;
-  letter-spacing: 0.2rem;
+  color: white !important; /* Color de letra blanco */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+  letter-spacing: 0.3rem !important;
   font-weight: bold !important;
-  font-size: 1.5rem;
+  font-size: 1.2rem !important; /* Aumentar el tamaño de la fuente */
   transition: color 0.3s ease, transform 0.3s ease;
+  padding: 12px 25px; /* Aumentar el padding para mejorar el área clickeable */
 }
 
+/* Efecto hover de los enlaces */
 .nav-link:hover {
-  color: rgb(227, 245, 127) !important; /* Cambio de color en hover */
+  color: rgb(227, 245, 127) !important;
   transform: scale(1.05);
 }
 
+/* Estilo de enlace activo */
 .nav-link.active {
-  color: #f9f9f9;
+  color: #f9f9f9 !important;
   text-decoration: underline;
 }
 
-.navbar a {
-  color: inherit;
-}
-
-/* Estilos específicos para pantallas pequeñas */
+/* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
   .navbar-nav {
     display: block;
@@ -61,15 +80,19 @@
   }
 
   .nav-link {
-    font-size: 1.2rem;
+    font-size: 1.8rem; /* Aumentar el tamaño en pantallas pequeñas */
     letter-spacing: 0.1rem;
   }
 
-  .logo {
-    width: 120px;
-  }
+/* Logo styles */
+.logo {
+  height: 70px;
+  width: 150px;
+  margin: 0 auto;
+  display: block;
+  background-color: transparent !important; /* Ensures background is transparent */
+  border: none !important;
+  box-shadow: none !important;
+}
 
-  .navbar-toggler {
-    display: block;
-  }
 }

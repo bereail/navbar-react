@@ -11,12 +11,13 @@ function Inicio() {
           <span>Trayectoria Firme</span>
         </h1>
         <p className={styles.inicioParagraph}>Explora nuestros productos y descubre más sobre nosotros</p>
-        <a href="#NuestrosProductos" className={styles.inicioButton}>Ver Productos</a>
+        <div className={styles.inicioButtonsContainer}>
+          <a href="#NuestrosProductos" className={styles.inicioButtonNaranja}>Ver Productos</a>
+          <a href="#Nosotros" className={styles.inicioButtonVerde}>Conocer más</a>
+        </div>
       </div>
     </section>
   );
 }
-
-
 
 export default Inicio;
