@@ -1,14 +1,75 @@
 .navbar {
   position: fixed;
+  font-size: 1.2rem;
   top: 0;
   width: 100%;
   z-index: 10;
-  background-color: rgba(91, 206, 55, 0.5); /* Fondo blanco con 90% de opacidad */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
-  transition: background-color 0.3s ease; /* Transición suave para el fondo */
+  transition: background-color 1s ease, box-shadow 1s ease;
+  color: white;
+  padding: 10px 0;
+  background-color: rgba(255, 165, 0, 0);
+}
+
+.transparent {
+  background-color: rgba(255, 165, 0, 0);
+  box-shadow: none;
+}
+
+.solid {
+  background-color: rgba(255, 165, 0, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
   height: 70px;
   width: 150px;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: white;
+  letter-spacing: 0.2rem;
+  font-weight: bold !important;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: rgb(227, 245, 127) !important; /* Cambio de color en hover */
+  transform: scale(1.05);
+}
+
+.nav-link.active {
+  color: #f9f9f9;
+  text-decoration: underline;
+}
+
+.navbar a {
+  color: inherit;
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbar-nav {
+    display: block;
+    text-align: center;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
 }

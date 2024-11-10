@@ -1,0 +1,2 @@
+- Que el footer no se ve en todas las paginas, solo al final.
+- Logo transparente en en navbar

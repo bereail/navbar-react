@@ -1,3 +1,13 @@
+/* Footer.module.css */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+
 .footer {
     background-color: rgb(227, 245, 127); /* Color de fondo */
     color: e3f57f; /* Color del texto */

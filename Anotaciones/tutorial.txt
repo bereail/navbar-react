@@ -1,0 +1,32 @@
+funcionalidades modernas y UI/UX en React:
+
+"Modern UI/UX design with React"
+
+Encuentra tutoriales sobre cómo implementar interfaces modernas y principios de UX en proyectos React.
+"React animations with Framer Motion" o "Framer Motion tutorial React"
+
+Tutoriales sobre cómo crear animaciones fluidas y atractivas usando Framer Motion en aplicaciones React.
+"React parallax scrolling tutorial" o "Parallax effects in React"
+
+Aprende a implementar efectos de desplazamiento (scrolling) con parallax, ideales para agregar profundidad a tu sitio.
+"React transition effects" o "Page transition animations React"
+
+Descubre cómo agregar transiciones entre páginas o componentes en React para una experiencia de navegación más suave.
+"React form validation with React Hook Form" o "Interactive forms React tutorial"
+
+Busca tutoriales sobre cómo crear formularios dinámicos e interactivos con validación en tiempo real.
+"React 3D effects with Three.js" o "Three.js + React tutorial"
+
+Tutoriales para integrar gráficos en 3D en React usando Three.js, una biblioteca potente para crear visualizaciones en 3D.
+"Responsive navbar in React" o "Responsive sidebar React tutorial"
+
+Aprende a crear menús de navegación y barras laterales responsivas, muy útiles para dispositivos móviles y tabletas.
+"React UI libraries comparison" o "Top React UI libraries 2024"
+
+Encuentra comparaciones de las bibliotecas más populares de componentes UI en React, como Material UI, Ant Design, Chakra UI, y Headless UI.
+"React dark mode toggle tutorial" o "Dark and light mode in React"
+
+Busca cómo implementar una funcionalidad de modo oscuro/claro, que es una tendencia muy popular en UI moderna.
+"CSS transitions and animations in React" o "Advanced CSS for React developers"
+
+Tutoriales sobre cómo aplicar transiciones y animaciones de CSS en React para mejorar la interactividad sin usar demasiadas dependencias externas.
