@@ -1,56 +1,55 @@
-/* src/styles/NuestrosProductos.module.css */
-
 .section {
-   margin: 1em;
-}
-
-.title {
     margin: 1em;
-}
-
-.content {
-    position: relative;
-    text-align: center; /* Centra el texto dentro del contenido */
-    margin: 0em 3em;
-}
-
-.content h1 {
-    font-size: 3rem;
-    /* Tamaño del título */
-    color: #333;
-    /* Color del texto del título */
-    margin-bottom: 20px;
-    /* Espaciado inferior del título */
-}
-
-.content p {
-    font-size: 1.25rem;
-    /* Tamaño del texto */
-    line-height: 1.6;
-    /* Altura de línea */
-    color: #333;
-    /* Color del texto */
-}
-
-.content .img{
-    width: 5rem;
-    height: 5rem;
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-    .content h1 {
-        font-size: 2rem;
-        /* Tamaño del título en móviles */
-    }
-
-    .section {
-        padding: 3rem 0.6rem;
-        /* Menos espaciado en móviles */
-    }
-
-    .content p {
-        font-size: 1rem;
-        /* Tamaño de texto en móviles */
-    }
-}
+ }
+ 
+ .title {
+     margin: 1em;
+ }
+ 
+ .content {
+     position: relative;
+     text-align: center; /* Centra el texto dentro del contenido */
+     margin: 0em 3em;
+ }
+ 
+ .content h1 {
+     font-size: 3rem;
+     /* Tamaño del título */
+     color: #333;
+     /* Color del texto del título */
+     margin-bottom: 20px;
+     /* Espaciado inferior del título */
+ }
+ 
+ .content p {
+     font-size: 1.25rem;
+     /* Tamaño del texto */
+     line-height: 1.6;
+     /* Altura de línea */
+     color: #333;
+     /* Color del texto */
+ }
+ 
+ .content .img {
+     width: 5rem;
+     height: 5rem;
+ }
+ 
+ /* Responsividad */
+ @media (max-width: 768px) {
+     .content h1 {
+         font-size: 2rem;
+         /* Tamaño del título en móviles */
+     }
+ 
+     .section {
+         padding: 3rem 0.6rem;
+         /* Menos espaciado en móviles */
+     }
+ 
+     .content p {
+         font-size: 1rem;
+         /* Tamaño de texto en móviles */
+     }
+ }
+ 

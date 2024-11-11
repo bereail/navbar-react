@@ -1,103 +1,64 @@
-/* src/styles/Productos.module.css */
-
+/* Main container for products */
 .productosContainer {
-    padding: 20px; /* Espaciado interno */
-    background-color: white; /* Fondo blanco para el contenedor */
-    border-radius: 8px; /* Esquinas redondeadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 2em 0;
 }
 
 .productsRow {
-    display: flex; /* Usar flexbox para distribución horizontal */
-    justify-content: center; /* Centrar los productos */
-    flex-wrap: wrap; /* Permitir que las tarjetas se ajusten en líneas */
-}
-
-
-.productosContainer {
-    padding: 20px;
-    text-align: center; /* Center align the titles */
-    background-color: rgb(227, 245, 127)
-}
-
-.p{
-    background-color: rgb(227, 245, 127);
-}
-
-.productosContainer h1 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #333; /* Dark color for the title */
-}
-
-.scrollContainer {
-    overflow-x: auto; /* Habilitar el desplazamiento horizontal */
-    white-space: nowrap; /* Evitar que los elementos se ajusten */
-    padding: 10px 0; /* Espaciado superior e inferior */
-}
-
-.productsRow {
-    display: inline-flex; /* Usar flexbox para alinear las tarjetas en línea */
+    display: flex;
+    flex-wrap: wrap;  /* Allow wrapping of items */
+    justify-content: space-between;
+    gap: 1em;  /* Space between items */
 }
 
 .card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effects */
-    margin-right: 20px; /* Espacio entre las tarjetas */
-    display: inline-block; /* Asegurarse de que las tarjetas se alineen en línea */
-}
-
-.card:last-child {
-    margin-right: 0; /* Sin margen derecho en la última tarjeta */
-}
-
-.card:hover {
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+    flex-basis: calc(33.333% - 1em); /* 3 cards per row */
+    margin-bottom: 1em;
 }
 
 .card-img-top {
-    max-height: 200px; /* Set a max height for images */
-    object-fit: cover; /* Cover to maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 8px;
+    width: 100%;  /* Ensure the image fills the card */
+    height: 200px; /* Fixed height for images */
 }
 
 .card-body {
-    padding: 15px;
-}
-
-.card-title {
-    font-size: 1.25rem; /* Adjusted title size */
-    color: #007bff; /* Blue color for titles */
-}
-
-.card-text {
-    font-size: 0.9rem;
-    color: #666; /* Slightly lighter text for description */
+    padding: 1em;
 }
 
 .card-footer {
-    background: transparent; /* Transparent footer */
-    border-top: none; /* No border */
+    padding: 0.5em;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
 }
 
-.text-body-secondary {
-    color: #999; /* Secondary text color */
+/* Responsiveness */
+@media (max-width: 992px) {
+    .card {
+        flex-basis: calc(50% - 1em);  /* 2 cards per row on medium screens */
+    }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .card {
-        margin-bottom: 20px; /* Add space between cards on small screens */
-    }
-    
-    .productosContainer h1 {
-        font-size: 2rem; /* Smaller title size for mobile */
+        flex-basis: 100%;  /* 1 card per row on smaller screens */
     }
 
-    .card-title {
-        font-size: 1.1rem; /* Smaller title for mobile */
+    /* Adjust the title size on small screens */
+    .content h1 {
+        font-size: 2rem;
     }
 
-    .card-text {
-        font-size: 0.8rem; /* Smaller text for mobile */
+    /* Adjust section padding on smaller screens */
+    .section {
+        padding: 3rem 0.6rem;
+    }
+
+    /* Adjust text size for mobile */
+    .content p {
+        font-size: 1rem;
     }
 }

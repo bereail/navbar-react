@@ -31,11 +31,7 @@ const Carrusel = () => {
     <Carousel interval={3000} pause="hover">
       {productos.map((producto) => (
         <Carousel.Item key={producto.id} className={styles.carouselItem}>
-          <img
-            className="d-block w-100"
-            src={producto.imgSrc}
-            alt={producto.title}
-          />
+          <img className="d-block w-100" src={producto.imgSrc} alt={producto.title} />
           <Carousel.Caption className={styles.carouselCaption}>
             <h5>{producto.title}</h5>
             <p>{producto.description}</p>
@@ -44,6 +40,6 @@ const Carrusel = () => {
       ))}
     </Carousel>
   );
-}
+};
 
 export default Carrusel;
