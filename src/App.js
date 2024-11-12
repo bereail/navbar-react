@@ -20,11 +20,11 @@ function App() {
         <Element name="Inicio">
           <Inicio />
         </Element>
-        <Element name="NuestrosProductos">
-          <NuestrosProductos />
-        </Element>
         <Element name="Nosotros">
           <Nosotros />
+        </Element>
+        <Element name="NuestrosProductos">
+          <NuestrosProductos />
         </Element>
         <Element name="Sostenibilidad">
           <Sostenibilidad />

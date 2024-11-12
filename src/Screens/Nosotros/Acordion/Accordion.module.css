@@ -1,0 +1,32 @@
+.accordionSection {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .accordionHeader {
+    background-color: #f0f0f0;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .accordionContent {
+    padding: 10px;
+  }
+  
+  .icon {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  .accordionHeader:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .accordionHeader:focus {
+    outline: none;
+  }
+  
