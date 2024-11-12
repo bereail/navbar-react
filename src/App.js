@@ -12,6 +12,8 @@ import { Element } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Navbar /> {/* Navbar siempre visible */}
@@ -34,7 +36,7 @@ function App() {
           <Comercializacion />
         </Element>
         <Element name="Ventajas">
-          <Ventajas />
+           <Ventajas />
         </Element>
        
         <Element name="Contacto">

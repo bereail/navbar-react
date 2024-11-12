@@ -1,64 +1,41 @@
-/* Main container for products */
-.productosContainer {
-    margin: 2em 0;
+.productCarousel .carousel-control-prev,
+.productCarousel .carousel-control-next {
+  background-color: rgba(0, 0, 255, 0.2); /* Fondo azul claro con transparencia */
+  border-radius: 50%; /* Redondeado */
+  width: 50px; /* Ajusta el tamaño según sea necesario */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.productsRow {
-    display: flex;
-    flex-wrap: wrap;  /* Allow wrapping of items */
-    justify-content: space-between;
-    gap: 1em;  /* Space between items */
+.productCarousel .carousel-control-prev-icon,
+.productCarousel .carousel-control-next-icon {
+  background-color: transparent; /* Asegura que el ícono sea transparente */
 }
 
-.card {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+.productCarousel {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .productCard {
+    width: 100%;
+    max-width: 400px;
     border: none;
-    border-radius: 8px;
-    flex-basis: calc(33.333% - 1em); /* 3 cards per row */
-    margin-bottom: 1em;
-}
-
-.card-img-top {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .productCard img {
+    height: 200px;
     object-fit: cover;
-    border-radius: 8px;
-    width: 100%;  /* Ensure the image fills the card */
-    height: 200px; /* Fixed height for images */
-}
-
-.card-body {
-    padding: 1em;
-}
-
-.card-footer {
-    padding: 0.5em;
-    background-color: #f8f9fa;
-    border-top: 1px solid #e9ecef;
-}
-
-/* Responsiveness */
-@media (max-width: 992px) {
-    .card {
-        flex-basis: calc(50% - 1em);  /* 2 cards per row on medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .card {
-        flex-basis: 100%;  /* 1 card per row on smaller screens */
-    }
-
-    /* Adjust the title size on small screens */
-    .content h1 {
-        font-size: 2rem;
-    }
-
-    /* Adjust section padding on smaller screens */
-    .section {
-        padding: 3rem 0.6rem;
-    }
-
-    /* Adjust text size for mobile */
-    .content p {
-        font-size: 1rem;
-    }
-}
+  }
+  
+  .checkIcon {
+    color: green;
+    margin-right: 5px;
+  }
+  

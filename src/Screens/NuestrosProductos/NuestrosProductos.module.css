@@ -1,55 +1,56 @@
 .section {
-    margin: 1em;
- }
- 
- .title {
-     margin: 1em;
- }
- 
- .content {
-     position: relative;
-     text-align: center; /* Centra el texto dentro del contenido */
-     margin: 0em 3em;
- }
- 
- .content h1 {
-     font-size: 3rem;
-     /* Tamaño del título */
-     color: #333;
-     /* Color del texto del título */
-     margin-bottom: 20px;
-     /* Espaciado inferior del título */
- }
- 
- .content p {
-     font-size: 1.25rem;
-     /* Tamaño del texto */
-     line-height: 1.6;
-     /* Altura de línea */
-     color: #333;
-     /* Color del texto */
- }
- 
- .content .img {
-     width: 5rem;
-     height: 5rem;
- }
- 
- /* Responsividad */
- @media (max-width: 768px) {
-     .content h1 {
-         font-size: 2rem;
-         /* Tamaño del título en móviles */
-     }
- 
-     .section {
-         padding: 3rem 0.6rem;
-         /* Menos espaciado en móviles */
-     }
- 
-     .content p {
-         font-size: 1rem;
-         /* Tamaño de texto en móviles */
-     }
- }
- 
+  padding: 2rem 0;
+  text-align: center;
+  background-color: #333;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.productCarousel {
+  position: relative;
+  overflow: visible; /* Permite ver las imágenes en segundo plano */
+}
+
+.carousel-item {
+  transform: scale(0.8);
+  transition: transform 0.5s ease;
+  opacity: 0.6;
+}
+
+.carousel-item.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.centeredProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.productCard {
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.customPrevIcon,
+.customNextIcon {
+  font-size: 30px;
+  color: blue;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: blue;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}

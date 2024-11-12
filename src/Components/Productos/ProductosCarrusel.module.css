@@ -1,0 +1,65 @@
+.productCarousel {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.productCard {
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.productCard img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.carouselItem {
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.centerCard {
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.carouselImage {
+  border-radius: 8px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  cursor: pointer;
+}
+
+.sideImage {
+  opacity: 0.6;
+  transform: scale(0.8);
+}
+
+.centerImage {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.customPrevIcon,
+.customNextIcon {
+  font-size: 30px;
+  color: blue;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}

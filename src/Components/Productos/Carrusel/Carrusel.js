@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import cajoneEspecialesImg from '../../../assets/cajoneEspecialesImg.png';
 import contenedorEstandarUltrabox1200 from '../../../assets/contenedorEstandarUltraboxA1200.png';
@@ -43,3 +43,4 @@ const Carrusel = () => {
 };
 
 export default Carrusel;
+*/
