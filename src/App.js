@@ -10,15 +10,12 @@ import Comercializacion from './Screens/Comercializacion/Comercializacion';
 import Ventajas from './Screens/Ventajas/Ventajas';
 import { Element } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Slider from './Components/Slider/Slider';
 function App() {
-
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Navbar /> {/* Navbar siempre visible */}
-
-      {/* Contenedor principal ajustado para expandirse */}
+      <Navbar />
       <main style={{ flex: 1 }}>
         <Element name="Inicio">
           <Inicio />
@@ -36,14 +33,18 @@ function App() {
           <Comercializacion />
         </Element>
         <Element name="Ventajas">
-           <Ventajas />
+          <Ventajas />
         </Element>
-       
+        <Element name="Slider">
+  <Slider />  
+</Element>
+
+
         <Element name="Contacto">
           <Contacto />
         </Element>
       </main>
-
+      <Footer />
     </div>
   );
 }
