@@ -1,56 +1,42 @@
-.section {
-  padding: 2rem 0;
+/* Estilos para la sección "Nuestros Productos" */
+#NuestrosProductos {
+  padding: 50px 20px;
+  background-color: #f4f4f4;  /* Color de fondo suave */
   text-align: center;
-  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
 }
 
-.title {
+h2 {
   font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #333;
+  margin-bottom: 20px;
+  color: #333;  /* Color del texto del título */
+  font-family: 'Georgia', serif;
 }
 
-.productCarousel {
-  position: relative;
-  overflow: visible; /* Permite ver las imágenes en segundo plano */
+.slider-container {
+  margin-top: 20px;
 }
 
-.carousel-item {
-  transform: scale(0.8);
-  transition: transform 0.5s ease;
-  opacity: 0.6;
+.button-container {
+  margin-top: 30px;
 }
 
-.carousel-item.active {
-  transform: scale(1);
-  opacity: 1;
+.button-cotizacion {
+  background-color: #FFA500 !important;  /* Naranja */
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.centeredProduct {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+.button-cotizacion:hover {
+  background-color: #FF8C00;  /* Naranja más oscuro para el hover */
 }
 
-.productCard {
-  width: 300px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.customPrevIcon,
-.customNextIcon {
-  font-size: 30px;
-  color: blue;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: blue;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
+.button-cotizacion:focus {
+  outline: none;
 }

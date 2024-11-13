@@ -1,15 +1,31 @@
 import React, { useState } from 'react';
-import { Carousel, Card, Modal, Button } from 'react-bootstrap';
-import { FaCheckCircle } from 'react-icons/fa';
-import styles from './NuestrosProductos.module.css';
-import cajoneEspecialesImg from '../../assets/cajoneEspecialesImg.png';
-import contenedorEstandarUltrabox1200 from '../../assets/contenedorEstandarUltraboxA1200.png';
-import contenedorOctogonalUltrabin1000 from '../../assets/contenedorOctogonalUltrabin1000.png';
-import octobin2 from '../../assets/octobin2.png';
-
+import Slider from '../../Components/Slider/Slider';
+import styles from '../NuestrosProductos/NuestrosProductos.module.css';
+import Ventajas from '../Ventajas/Ventajas';
 
 const NuestrosProductos = () => {
-  const [showModal, setShowModal] = useState(false);
+  return (
+    <section id="NuestrosProductos" className={styles.section}>
+  <div>
+    <h2>Nuestros Productos</h2>
+    <Slider />
+  </div>
+  <div className={styles.buttonContainer}>
+    <button className={styles.buttonCotizacion} onClick={() => alert('Solicitud de cotización enviada!')}>
+      Solicitar Cotización
+    </button>
+  </div>
+  <div>
+  <Ventajas />
+  </div>
+</section>
+
+  );
+};
+
+export default NuestrosProductos;
+
+/* const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const productos = [
@@ -124,7 +140,4 @@ const NuestrosProductos = () => {
         </Modal.Footer>
       </Modal>
     </section>
-  );
-};
-
-export default NuestrosProductos;
+  );*/
