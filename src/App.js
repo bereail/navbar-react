@@ -32,14 +32,6 @@ function App() {
         <Element name="Comercializacion">
           <Comercializacion />
         </Element>
-        <Element name="Ventajas">
-          <Ventajas />
-        </Element>
-        <Element name="Slider">
-  <Slider />  
-</Element>
-
-
         <Element name="Contacto">
           <Contacto />
         </Element>

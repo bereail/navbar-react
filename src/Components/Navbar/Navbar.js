@@ -53,7 +53,7 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            {['Inicio', 'Nosotros', 'Nuestros Productos', 'Sostenibilidad', 'Comercializacion', 'Ventajas', 'Contacto', 'Slide'].map((section) => (
+            {['Inicio', 'Nosotros', 'Nuestros Productos', 'Sostenibilidad', 'Comercializacion', 'Contacto'].map((section) => (
               <li className="nav-item" key={section}>
                 <Link
                   className={`${styles['nav-link']} nav-link`}
