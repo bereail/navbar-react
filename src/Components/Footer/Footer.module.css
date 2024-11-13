@@ -14,7 +14,7 @@
     text-align: center; /* Centrar el contenido */
     padding: 20px 0; /* Espacio alrededor del texto */
     font-size: 0.9rem; /* Tamaño del texto */
-    position: fixed; /* Fija el footer en la parte inferior */
+    /* Fija el footer en la parte inferior */
     bottom: 0;
     width: 100%; /* Ocupa todo el ancho de la pantalla */
   }
