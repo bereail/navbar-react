@@ -1,24 +1,60 @@
-import React, { useState } from 'react';
-import Slider from '../../Components/Slider/Slider';
+import React from 'react';
+import cajonEspecial from '../../assets/cajonEspecial.png';
+import contenedorEstandarUltrabox1200 from '../../assets/contenedorEstandarUltraboxA1200.png';
+import contenedorOctogonalUltrabin1000 from '../../assets/contenedorOctogonalUltrabin1000.png';
+import octobin2 from '../../assets/octobin2.png';
+
 import styles from '../NuestrosProductos/NuestrosProductos.module.css';
 import Ventajas from '../Ventajas/Ventajas';
 
+import Slider from '../../Components/Slider/Slider';
+
+
+const PRODUCTOS = [
+  {
+    id: 1,
+    title: 'Octabin',
+    description: 'Solución innovadora para almacenamiento',
+    img: octobin2,
+    features: ['Característica A', 'Característica B', 'Característica C']
+  },
+  {
+    id: 2,
+    title: 'Cajones Especiales',
+    description: 'Contenedor especial para productos delicados',
+    img: cajonEspecial,
+    features: ['Característica A', 'Característica B', 'Característica C']
+  },
+  {
+    id: 3,
+    title: 'Contenedor Estandar Ultrabox 1200',
+    description: 'Contenedor de gran capacidad y durabilidad',
+    img: contenedorEstandarUltrabox1200,
+    features: ['Característica A', 'Característica B', 'Característica C']
+  },
+  {
+    id: 4,
+    title: 'Contenedor Octogonal Ultrabin 1000',
+    description: 'Diseño octogonal para un uso óptimo del espacio',
+    img: contenedorOctogonalUltrabin1000,
+    features: ['Característica A', 'Característica B', 'Característica C']
+  }
+]
+
 const NuestrosProductos = () => {
   return (
-    <section id="NuestrosProductos" className={styles.section}>
-  <div>
-    <h2>Nuestros Productos</h2>
-    <Slider />
-  </div>
-  <div className={styles.buttonContainer}>
-    <button className={styles.buttonCotizacion} onClick={() => alert('Solicitud de cotización enviada!')}>
-      Solicitar Cotización
-    </button>
-  </div>
-  <div>
-  <Ventajas />
-  </div>
-</section>
+    <section className={styles.section}>
+      <h2>Nuestros Productos</h2>
+      <Slider productos={PRODUCTOS} />
+      <div className={styles.buttonContainer}>
+        <button className={styles.buttonCotizacion} onClick={() => alert('Solicitud de cotización enviada!')}>
+          Solicitar Cotización
+        </button>
+      </div>
+      <div>
+        <Ventajas />
+      </div>
+    </section>
 
   );
 };

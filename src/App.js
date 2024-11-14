@@ -23,7 +23,7 @@ function App() {
         <Element name="Nosotros">
           <Nosotros />
         </Element>
-        <Element name="NuestrosProductos">
+        <Element name="Nuestros Productos">
           <NuestrosProductos />
         </Element>
         <Element name="Sostenibilidad">

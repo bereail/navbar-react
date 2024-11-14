@@ -1,0 +1,114 @@
+/* Contenedor principal del slider */
+.slider-container {
+  position: relative; /* Permite que los elementos dentro del contenedor puedan posicionarse de forma absoluta */
+  max-width: 80%; /* Limita el ancho del slider al 80% del contenedor principal para hacerlo más pequeño */
+  margin: 0 auto; /* Centra el slider horizontalmente */
+  overflow: hidden; /* Asegura que el contenido que se sale del área visible se recorte */
+}
+
+.swiper-slide {
+  max-width: 700px; /* Ajusta este valor según el tamaño deseado */
+  margin: 0 auto; /* Centra los slides dentro del contenedor */
+}
+
+/* Ajusta el tamaño de las imágenes */
+.slider-container img {
+  width: 100%; /* Hace que la imagen ocupe todo el slide */
+  max-height: 400px; /* Controla la altura de la imagen */
+  object-fit: cover; /* Asegura que la imagen se recorte correctamente si es necesario */
+}
+
+/* Controla el tamaño de las flechas de navegación */
+.slider-controller {
+  display: flex;
+  justify-content: space-between; /* Coloca las flechas en los extremos */
+  width: 100%; /* Asegura que las flechas cubran todo el ancho del slider */
+  position: absolute; /* Asegura que las flechas estén sobre el slider */
+  top: 50%; /* Centra las flechas verticalmente */
+  transform: translateY(-50%); /* Ajusta la posición para que esté centrado verticalmente */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  cursor: pointer;
+  font-size: 1.5rem; /* Ajusta el tamaño de las flechas */
+  padding: 0 10px; /* Espacio para las flechas */
+}
+
+/* Cada elemento del carrusel (slide) */
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Información del producto (nombre y descripción) */
+.product-info {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.product-info h4 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.product-info p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Estilos para las flechas de navegación */
+.swiper-button-prev {
+  position: absolute;
+  left: 10px;
+}
+
+.swiper-button-next {
+  position: absolute;
+  right: 10px;
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .slider-container {
+    max-width: 100%; /* Utiliza el 100% del ancho en pantallas más pequeñas */
+  }
+
+  .swiper-slide {
+    max-width: 100%; /* Asegura que los slides ocupen todo el espacio en pantallas pequeñas */
+  }
+
+  .slider-container img {
+    max-height: 300px; /* Ajusta la altura de las imágenes en pantallas pequeñas */
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    font-size: 1rem; /* Ajusta el tamaño de las flechas en pantallas pequeñas */
+  }
+}
+
+
+.flip-card-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: rotateY(180deg);
+}

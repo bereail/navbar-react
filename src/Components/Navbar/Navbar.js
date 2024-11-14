@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.navbar} navbar navbar-expand-lg fixed-top ${scrolled ? styles.solid : styles.transparent} ${isGreen ? styles.green : ''}`}
+      className={`${styles.navbar} navbar navbar-expand-sm fixed-top ${scrolled ? styles.solid : styles.transparent} ${isGreen ? styles.green : ''}`}
     >
       <div className="container-fluid">
         {/* Logo with transparent background */}
