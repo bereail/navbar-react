@@ -1,66 +1,39 @@
 .section {
-  background-color: #f4f4f4; 
-  padding: 40px 20px; 
-  border-radius: 8px;
-  max-width: 1200px;
-  margin: 20px auto; 
-  color: #333;
-  font-family: Arial, sans-serif;
-  height: 100vh;
-}
-
-.cardContainer {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
+  background-color: #f4f4f4;  /* Fondo gris claro */
+  padding: 40px 20px;  /* Espaciado interno */
+  border-radius: 8px;  /* Bordes redondeados */
+  max-width: 1200px;  /* Ancho máximo de la sección */
+  margin: 20px auto;  /* Centrado automático */
+  color: #333;  /* Color del texto */
+  font-family: Arial, sans-serif;  /* Tipo de fuente */
+  height: 100vh;  /* Altura completa */
 }
 
 .card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 48%; /* Cada card ocupa el 48% del espacio */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;  /* Fondo blanco de las tarjetas */
+  padding: 20px;  /* Espaciado interno de la tarjeta */
+  border-radius: 8px;  /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra en las tarjetas */
 }
 
 h2 {
-  font-size: 2rem;
-  color: #2e7d32; 
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.subheading {
-  font-size: 1.5rem;
-  color: #2e7d32;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #2e7d32;
-  padding-bottom: 5px;
+  font-size: 2rem;  /* Tamaño grande de fuente para el título */
+  color: #2e7d32;  /* Color verde */
+  text-align: center;  /* Alineación centrada */
+  margin-bottom: 20px;  /* Espacio debajo del título */
 }
 
 button {
-  background-color: #2e7d32;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  margin-left: 10px;
-  border-radius: 5px;
+  background-color: #2e7d32;  /* Color de fondo verde para el botón */
+  color: white;  /* Color blanco para el texto del botón */
+  border: none;  /* Sin borde */
+  padding: 5px 10px;  /* Relleno del botón */
+  cursor: pointer;  /* Puntero en forma de mano */
+  font-size: 0.9rem;  /* Tamaño de la fuente */
+  margin-left: 10px;  /* Margen izquierdo del botón */
+  border-radius: 5px;  /* Bordes redondeados del botón */
 }
 
 button:hover {
-  background-color: #1c5d25;
-}
-
-.details {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #555;
-}
-
-.sectionContent {
-  padding: 10px 0;
-  font-size: 1rem;
+  background-color: #1c5d25;  /* Color más oscuro del botón al pasar el ratón */
 }
