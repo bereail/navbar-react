@@ -1,0 +1,67 @@
+.container{
+    display: flex;
+}
+
+/* Estilo para el contenedor del carrusel */
+.slider-container {
+    width: 100%;
+    height: max-content; /* Deja que el alto se ajuste automáticamente según el contenido */
+    max-height: 550px; /* Establece un máximo si lo deseas */
+    position: relative; /* Necesario para que las flechas se posicionen sobre el contenedor */
+}
+
+/* Ajustar la altura de los slides */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el contenido verticalmente */
+    width: 100%; /* Asegúrate de que los slides ocupen todo el ancho disponible */
+    height: auto; /* Permite que los slides ajusten su altura automáticamente */
+    min-height: 100%; /* Si quieres que tengan una altura mínima */
+}
+
+/* Si las tarjetas tienen un contenido dinámico, puedes forzar una altura mínima */
+.swiper-slide .card {
+    min-height: 300px; /* Establece una altura mínima si es necesario */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilo para las flechas de navegación */
+.slider-controller {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10; /* Asegura que las flechas estén sobre el contenido */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding: 12px;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+/* En pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .swiper-slide {
+        flex: 1 1 100%;
+        margin: 0 5px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        font-size: 18px;
+        padding: 8px;
+    }
+}

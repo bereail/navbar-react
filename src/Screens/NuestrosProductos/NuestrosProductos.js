@@ -8,7 +8,9 @@ import styles from '../NuestrosProductos/NuestrosProductos.module.css';
 import Ventajas from '../Ventajas/Ventajas';
 
 import Slider from '../../Components/Slider/Slider';
+import CarouselProductos from '../../Components/Carousel/CarouselProductos';
 
+import { faLayerGroup, faWeightHanging, faBoxesStacked } from '@fortawesome/free-solid-svg-icons'
 
 const PRODUCTOS = [
   {
@@ -16,28 +18,72 @@ const PRODUCTOS = [
     title: 'Octabin',
     description: 'Solución innovadora para almacenamiento',
     img: octobin2,
-    features: ['Característica A', 'Característica B', 'Característica C']
+    features: [{
+      icon: faLayerGroup,
+      description: 'Construido a partir de múltiples capas de cartón corrugado de doble onda'
+    },
+    {
+      icon: faWeightHanging,
+      description: 'Resiste cargas pesadas de hasta 1200 kg'
+    },
+    {
+      icon: faBoxesStacked,
+      description: 'Puede ser apilado hasta 3 en altura permitiendo un máximo aprovechamiento del espacio de carga'
+    }]
   },
   {
     id: 2,
     title: 'Cajones Especiales',
     description: 'Contenedor especial para productos delicados',
     img: cajonEspecial,
-    features: ['Característica A', 'Característica B', 'Característica C']
+    features: [{
+      icon: faLayerGroup,
+      description: 'Construido a partir de múltiples capas de cartón corrugado de doble onda'
+    },
+    {
+      icon: faWeightHanging,
+      description: 'Resiste cargas pesadas de hasta 1200 kg'
+    },
+    {
+      icon: faBoxesStacked,
+      description: 'Puede ser apilado hasta 3 en altura permitiendo un máximo aprovechamiento del espacio de carga'
+    }]
   },
   {
     id: 3,
     title: 'Contenedor Estandar Ultrabox 1200',
     description: 'Contenedor de gran capacidad y durabilidad',
     img: contenedorEstandarUltrabox1200,
-    features: ['Característica A', 'Característica B', 'Característica C']
+    features: [{
+      icon: faLayerGroup,
+      description: 'Construido a partir de múltiples capas de cartón corrugado de doble onda'
+    },
+    {
+      icon: faWeightHanging,
+      description: 'Resiste cargas pesadas de hasta 1200 kg'
+    },
+    {
+      icon: faBoxesStacked,
+      description: 'Puede ser apilado hasta 3 en altura permitiendo un máximo aprovechamiento del espacio de carga'
+    }]
   },
   {
     id: 4,
     title: 'Contenedor Octogonal Ultrabin 1000',
     description: 'Diseño octogonal para un uso óptimo del espacio',
     img: contenedorOctogonalUltrabin1000,
-    features: ['Característica A', 'Característica B', 'Característica C']
+     features: [{
+      icon: faLayerGroup,
+      description: 'Construido a partir de múltiples capas de cartón corrugado de doble onda'
+    },
+    {
+      icon: faWeightHanging,
+      description: 'Resiste cargas pesadas de hasta 1200 kg'
+    },
+    {
+      icon: faBoxesStacked,
+      description: 'Puede ser apilado hasta 3 en altura permitiendo un máximo aprovechamiento del espacio de carga'
+    }]
   }
 ]
 
@@ -45,15 +91,16 @@ const NuestrosProductos = () => {
   return (
     <section className={styles.section}>
       <h2>Nuestros Productos</h2>
-      <Slider productos={PRODUCTOS} />
-      <div className={styles.buttonContainer}>
+      {/* <Slider productos={PRODUCTOS} /> */}
+      <CarouselProductos productos={PRODUCTOS} />
+      {/*     <div className={styles.buttonContainer}>
         <button className={styles.buttonCotizacion} onClick={() => alert('Solicitud de cotización enviada!')}>
           Solicitar Cotización
         </button>
       </div>
       <div>
         <Ventajas />
-      </div>
+      </div> */}
     </section>
 
   );
