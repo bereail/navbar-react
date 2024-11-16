@@ -10,6 +10,20 @@
   justify-content: center; /* Centrar verticalmente el contenido */
 }
 
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Espacio entre las columnas */
+  margin-top: 40px;
+}
+
+.column {
+  flex: 1; /* Cada columna toma el mismo espacio */
+  min-width: 300px; /* Evita que las columnas se compriman demasiado */
+}
+
+
 h2 {
   margin-bottom: 2rem;
   margin-top: 3.2rem;
