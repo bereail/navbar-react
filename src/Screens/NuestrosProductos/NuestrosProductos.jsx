@@ -3,13 +3,8 @@ import cajonEspecial from '../../assets/cajonEspecial.png';
 import contenedorEstandarUltrabox1200 from '../../assets/contenedorEstandarUltraboxA1200.png';
 import contenedorOctogonalUltrabin1000 from '../../assets/contenedorOctogonalUltrabin1000.png';
 import octobin2 from '../../assets/octobin2.png';
-
 import styles from '../NuestrosProductos/NuestrosProductos.module.css';
-import Ventajas from '../Ventajas/Ventajas';
-
-import Slider from '../../Components/Slider/Slider';
 import CarouselProductos from '../../Components/Carousel/CarouselProductos';
-
 import { faLayerGroup, faWeightHanging, faBoxesStacked } from '@fortawesome/free-solid-svg-icons'
 import EjemplosUso from './EjemplosUso/EjemplosUso';
 import VentajasLogisticas from './VentajasLogisticas/VentajasLogisticas';

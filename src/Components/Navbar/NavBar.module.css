@@ -1,4 +1,11 @@
 /* Navbar principal */
+
+.green {
+  background-color: #00C853; 
+  transition: background-color 0.3s ease; /* Add smooth transition */
+}
+
+
 .navbar {
   position: fixed;
   top: 0px;
@@ -9,6 +16,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* NavBar.module.css */
+.green {
+  background-color: green !important; /* Cambia el fondo a verde */
+  transition: background-color 0.3s ease; /* Animación suave */
 }
 
 /* Fondo transparente */
@@ -23,11 +36,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Fondo verde cuando está en la sección de sostenibilidad */
-.green {
-  background-color: rgba(40, 167, 69, 0.9);
-  transition: background-color 0.5s ease;
-}
+
 
 /* Estilos del logo */
 .logo {
@@ -38,6 +47,17 @@
   background-color: transparent; /* Fondo transparente */
   border: none; /* Elimina cualquier borde */
   box-shadow: none; /* Elimina cualquier sombra */
+}
+
+@media (max-width: 576px) {
+  .logo {
+    height: 50px;
+    width: auto;
+  }
+  .nav-link {
+    font-size: 1rem;
+    padding: 8px 5px;
+  }
 }
 
 /* Contenedor de los enlaces */

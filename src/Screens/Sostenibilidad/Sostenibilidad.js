@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTrail, animated } from '@react-spring/web';
 import styles from './Sostenibilidad.module.css';
+import EcoCards from './EcoCards/EcoCards';
+import BeneficiosEcologicos from './BeneficiosEcologicos/BeneficiosEcologicos';
 
 const Sostenibilidad = () => {
   const items = [
@@ -18,17 +20,12 @@ const Sostenibilidad = () => {
   });
 
   return (
-    <section className={styles.section}>
-      <div className={styles.overlay}></div>
-      <h2 className={styles.title}>Diseño Sostenible</h2>
-      <div className={styles.infoContainer}>
-        {trail.map((style, index) => (
-          <animated.div key={index} style={style} className={styles.infoBox}>
-            <h3>{items[index].title}</h3>
-            <p>{items[index].text}</p>
-          </animated.div>
-        ))}
-      </div>
+    <section className={styles.section} id="Sostenibilidad">
+
+            <EcoCards />
+            <BeneficiosEcologicos />
+
+
     </section>
   );
 };

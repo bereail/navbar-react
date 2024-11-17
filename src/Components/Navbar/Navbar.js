@@ -14,14 +14,11 @@ const Navbar = () => {
 
       const sostenibilidadSection = document.getElementById('Sostenibilidad');
       if (sostenibilidadSection) {
-        const sectionTop = sostenibilidadSection.offsetTop;
-        const sectionBottom = sectionTop + sostenibilidadSection.offsetHeight;
+        const sectionTop = sostenibilidadSection.offsetTop; // Get the top position of the section
+        const sectionHeight = sostenibilidadSection.offsetHeight; // Get the section's height
 
-        if (offset >= sectionTop && offset <= sectionBottom) {
-          setIsGreen(true);
-        } else {
-          setIsGreen(false);
-        }
+        // Check if the navbar is within the section's vertical bounds
+        setIsGreen(offset >= sectionTop && offset <= (sectionTop + sectionHeight));
       }
     };
 
@@ -33,7 +30,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.navbar} navbar navbar-expand-sm fixed-top ${scrolled ? styles.solid : styles.transparent} ${isGreen ? styles.green : ''}`}
+      className={`${styles.navbar} navbar navbar-expand-sm fixed-top ${scrolled ? styles.solid : styles.transparent} ${
+        isGreen ? styles.green : ''
+      }`}
     >
       <div className="container-fluid">
         {/* Logo with transparent background */}
