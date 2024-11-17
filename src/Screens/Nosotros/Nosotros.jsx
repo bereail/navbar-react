@@ -1,15 +1,62 @@
 import React from 'react';
+//
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 import styles from './Nosotros.module.css';
-import AccordionSection from './Acordion/AccordionSection';
-import logo from '../../assets/logo.jpg'; // Asegúrate de importar el logo correctamente
+import AccordionSection from '../../Components/Acordion/AccordionSection';
+import logo from '../../assets/logo.jpg';
+//
+import './nosotros.css'
+import Expander from '../../Components/Expander/Expander';
 
 function Nosotros() {
   return (
-    <section id="Nosotros" className={styles.section}>
+    <div className='container-nosotros'>
+      <h1 className='title-nosotros'>Nosotros</h1>
+      <section className='section descripcion-empresa'>
+        <div className='card-descripcion-empresa'>
+          <h3>¿Quiénes Somos?</h3>
+          <p>
+            <strong> ULTRACORR SAS </strong>  es una empresa dedicada a la fabricación de envases especiales y
+            soluciones de packaging sostenible, diseñadas para satisfacer las necesidades del mercado local e
+            internacional.
+          </p>
+          <p>
+            Nos distinguimos por nuestra calidad, eficiencia y precios competitivos, lo que nos posiciona como una opción
+            preferente en la industria. Ofrecemos envases de cartón corrugado personalizados, adaptados a los desafíos
+            específicos de cada cliente.
+          </p>
+          <p>
+            Aunque somos una empresa joven, contamos con más de 20 años de experiencia en el sector,
+            combinando innovación y conocimiento para brindar soluciones de excelencia,
+            comprometidas con la sostenibilidad y la mejora continua.
+          </p>
+        </div>
+        <Button variant="success">Contáctenos</Button>
+      </section>
+      <section className="section">
+        <div className='section-filosofia-container'>
+          
+        <div className="content-filosofia">
+          <h3 className='title'>Misión</h3>
+          <p className='description'>Proveer soluciones extraordinarias en envases y embalajes, contribuyendo a reducir el impacto ecológico de las actividades de nuestros clientes.Optimización del uso de mercancías mediante materiales de bajo costo y respetuosos con el medio ambiente. Fomentar relaciones duraderas con nuestros clientes, basadas en un trato profesional y amable.</p>
+        </div>
+        <div className="content-filosofia">
+          <h3 className='title'>Visión</h3>
+          <p className='description'>Proveer soluciones extraordinarias en envases y embalajes, contribuyendo a reducir el impacto ecológico de las actividades de nuestros clientes.Optimización del uso de mercancías mediante materiales de bajo costo y respetuosos con el medio ambiente. Fomentar relaciones duraderas con nuestros clientes, basadas en un trato profesional y amable.</p>
+        </div>
+        </div>
+        
+      </section>
+    </div>
+
+  );
+}
+
+export default Nosotros;
+
+/*     <section id="Nosotros" className={styles.section}>
       <div className="row">
-        {/* Sección de Nosotros - Columna más grande */}
         <div className="col-md-8 mb-4">
           <div className="card">
             <div className="card-body">
@@ -28,9 +75,8 @@ function Nosotros() {
           </div>
         </div>
 
-        {/* Columna de Misión y Visión */}
         <div className="col-md-4 mb-4">
-          {/* Logo arriba de Misión y Visión */}
+         
           <div className="text-center mb-4">
             <img src={logo} alt="Logo" className="img-fluid" style={{ maxWidth: '200px' }} />
           </div>
@@ -38,8 +84,8 @@ function Nosotros() {
           <div className="card">
             <div className="card-body">
               <AccordionSection
-                title="Misión"  // Título de la sección de la misión
-                items={[  // Lista de ítems que describen la misión
+                title="Misión" 
+                items={[  
                   "Proveer soluciones extraordinarias en envases y embalajes, contribuyendo a reducir el impacto ecológico de las actividades de nuestros clientes.",
                   "Optimización del uso de mercancías mediante materiales de bajo costo y respetuosos con el medio ambiente.",
                   "Fomentar relaciones duraderas con nuestros clientes, basadas en un trato profesional y amable."
@@ -47,8 +93,8 @@ function Nosotros() {
               />
 
               <AccordionSection
-                title="Visión"  // Título de la sección de la visión
-                items={[  // Lista de ítems que describen la visión
+                title="Visión"
+                items={[  
                   "Fabricar productos de alta calidad, centrados en la innovación, eficiencia y el cuidado del medio ambiente.",
                   "Liderar el camino hacia un futuro sostenible y responsable en la industria de envases y embalajes.",
                   "Ser reconocidos por nuestra calidad, innovación y responsabilidad en el mercado."
@@ -58,8 +104,4 @@ function Nosotros() {
           </div>
         </div>
       </div>
-    </section>
-  );
-}
-
-export default Nosotros;
+    </section> */
