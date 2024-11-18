@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Granulados from './../../../assets/Granulados.png';
-import Liquidos from './../../../assets/Liquidos.png';
-import Congelados from './../../../assets/Congelados.png';
+import Granulados from '../../assets/Granulados.png';
+import Liquidos from '../../assets/Liquidos.png';
+import Congelados from '../../assets/Congelados.png';
 import styles from './EjemplosUso.module.css';
+
 
 const EjemplosUso = () => {
   const examples = [
@@ -43,11 +44,22 @@ const EjemplosUso = () => {
 
   return (
     <div className={styles.container}>
-      {/* Cambia el color dinámicamente con la clase CSS */}
-      <h2 className={`${styles.title} ${currentExample.colorClass}`}>
-        Ejemplos de uso {currentExample.title}
-      </h2>
-      <div className={styles.card}>
+      <h1 className={`${styles.title}`}>
+        Ejemplos de uso
+      </h1>
+
+      <div className={styles.containerUsos}>
+        <img
+          src={currentExample.image}
+          alt={currentExample.title}
+        />
+        <div>
+          <h4>{currentExample.title}</h4>
+          <p>{currentExample.description}</p>
+        </div>
+      </div>
+
+     {/*  <div className={styles.card}>
         <img
           src={currentExample.image}
           alt={currentExample.title}
@@ -57,9 +69,10 @@ const EjemplosUso = () => {
           <h5 className={styles.cardTitle}>{currentExample.title}</h5>
           <p className={styles.cardText}>{currentExample.description}</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
 export default EjemplosUso;
+

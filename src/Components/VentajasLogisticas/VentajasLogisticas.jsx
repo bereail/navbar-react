@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './VentajasLogisticas.module.css';
-import Octobin from './../../../assets/Octobin.png';
-import Tambor from './../../../assets/Tambor.png';
+import Octobin from '../../assets/Octobin.png';
+import Tambor from '../../assets/Tambor.png';
 
 const VentajasLogisticas = () => {
   return (

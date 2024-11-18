@@ -3,10 +3,8 @@ import Item from './Item/Item'
 import './carouselProductos.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import { ArrowLeft, ArrowRight } from 'phosphor-react';
-
-import 'swiper/css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const CarouselProductos = ({ productos }) => {
 
@@ -19,26 +17,26 @@ const CarouselProductos = ({ productos }) => {
         ))}</div> */
         <div className="slider-container">
             <Swiper
-            effect={'slide'} // Usamos 'slide' para el efecto normal de carrusel
-            centeredSlides={true}  // Centra los slides
-            loop={true}  // Habilita el loop para que se repita
+            effect={'slide'} 
+            centeredSlides={true}  
+            loop={true} 
             navigation={{
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
                 clickable: true,
             }}
-            slidesPerView={3}  // Muestra 3 tarjetas a la vez por defecto
-            spaceBetween={20}  // Espacio entre las tarjetas
-            modules={[Navigation]}  // Solo necesitas el módulo de navegación
+            slidesPerView={3}  
+            spaceBetween={20} 
+            modules={[Navigation]}  
             breakpoints={{
                 1200: {
-                    slidesPerView: 3,  // En pantallas grandes, 3 items
+                    slidesPerView: 3, 
                 },
                 768: {
-                    slidesPerView: 2,  // En pantallas medianas, 2 items
+                    slidesPerView: 2,  
                 },
                 480: {
-                    slidesPerView: 1,  // En pantallas pequeñas, 1 item
+                    slidesPerView: 1, 
                 }
             }}
         >
@@ -51,12 +49,13 @@ const CarouselProductos = ({ productos }) => {
 
             <div className="slider-controller">
                 <div className="swiper-button-prev">
-                    <ArrowLeft size={20} />
+                    <FontAwesomeIcon icon={faChevronLeft}/>
                 </div>
                 <div className="swiper-button-next">
-                    <ArrowRight size={20} />
+                <FontAwesomeIcon icon={faChevronRight}/>
                 </div>
             </div>
+
         </div>
     );
 };

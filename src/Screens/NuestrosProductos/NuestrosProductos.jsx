@@ -1,31 +1,32 @@
 import React from 'react';
 import cajonEspecial from '../../assets/cajonEspecial.png';
-import contenedorEstandarUltrabox1200 from '../../assets/contenedorEstandarUltraboxA1200.png';
-import contenedorOctogonalUltrabin1000 from '../../assets/contenedorOctogonalUltrabin1000.png';
-import octobin2 from '../../assets/octobin2.png';
+import Ultrabox1200 from '../../assets/contenedorEstandarUltraboxA1200.png';
+import Ultrabin500 from '../../assets/35.png';
+import Ultrabin1000 from '../../assets/octobin2.png';
 import styles from '../NuestrosProductos/NuestrosProductos.module.css';
 import CarouselProductos from '../../Components/Carousel/CarouselProductos';
 import { faLayerGroup, faWeightHanging, faBoxesStacked } from '@fortawesome/free-solid-svg-icons'
-import EjemplosUso from './EjemplosUso/EjemplosUso';
-import VentajasLogisticas from './VentajasLogisticas/VentajasLogisticas';
+import EjemplosUso from '../../Components/EjemplosUso/EjemplosUso';
+import VentajasLogisticas from '../../Components/VentajasLogisticas/VentajasLogisticas';
+
 
 const PRODUCTOS = [
   {
     id: 1,
-    title: 'Octabin',
+    title: 'Ultrabin 1000',
     description: 'Solución innovadora para almacenamiento',
-    img: octobin2,
+    img: Ultrabin1000,
     features: [{
       icon: faLayerGroup,
-      description: 'Construido a partir de múltiples capas de cartón corrugado de doble onda'
+      description: 'Construido a partir de dos capas de cartón corrugado reforzado'
     },
     {
       icon: faWeightHanging,
-      description: 'Resiste cargas pesadas de hasta 1200 kg'
+      description: 'Resiste cargas pesadas de hasta 1000 kg'
     },
     {
       icon: faBoxesStacked,
-      description: 'Puede ser apilado hasta 3 en altura permitiendo un máximo aprovechamiento del espacio de carga'
+      description: 'Su forma octagonal permite enviar 200 litros más por posición en comparación con tambores de 200 litros'
     }]
   },
   {
@@ -35,22 +36,22 @@ const PRODUCTOS = [
     img: cajonEspecial,
     features: [{
       icon: faLayerGroup,
-      description: 'Construido a partir de múltiples capas de cartón corrugado de doble onda'
+      description: 'Caracteristica'
     },
     {
       icon: faWeightHanging,
-      description: 'Resiste cargas pesadas de hasta 1200 kg'
+      description: 'Caracteristica'
     },
     {
       icon: faBoxesStacked,
-      description: 'Puede ser apilado hasta 3 en altura permitiendo un máximo aprovechamiento del espacio de carga'
+      description: 'Caracteristica'
     }]
   },
   {
     id: 3,
-    title: 'Contenedor Estandar Ultrabox 1200',
-    description: 'Contenedor de gran capacidad y durabilidad',
-    img: contenedorEstandarUltrabox1200,
+    title: 'Ultrabox 1200',
+    description: 'Contenedor estandar de gran capacidad y durabilidad',
+    img: Ultrabox1200,
     features: [{
       icon: faLayerGroup,
       description: 'Construido a partir de múltiples capas de cartón corrugado de doble onda'
@@ -66,20 +67,20 @@ const PRODUCTOS = [
   },
   {
     id: 4,
-    title: 'Contenedor Octogonal Ultrabin 1000',
+    title: 'Ultrabin 500',
     description: 'Diseño octogonal para un uso óptimo del espacio',
-    img: contenedorOctogonalUltrabin1000,
-     features: [{
+    img: Ultrabin500,
+    features: [{
       icon: faLayerGroup,
-      description: 'Construido a partir de múltiples capas de cartón corrugado de doble onda'
+      description: 'Construido a partir de dos capas de cartón corrugado reforzado'
     },
     {
       icon: faWeightHanging,
-      description: 'Resiste cargas pesadas de hasta 1200 kg'
+      description: 'Resiste cargas pesadas de hasta 500 kg'
     },
     {
       icon: faBoxesStacked,
-      description: 'Puede ser apilado hasta 3 en altura permitiendo un máximo aprovechamiento del espacio de carga'
+      description: 'Su forma octogonal optimiza el espacio de transporte en comparacion con un diseño cilíndrico'
     }]
   }
 ]
@@ -90,13 +91,9 @@ const NuestrosProductos = () => {
       <h2>Nuestros Productos</h2>
       <CarouselProductos productos={PRODUCTOS} />
 
-      <div className={styles.row}>
-        <div className={styles.column}>
-          <EjemplosUso />
-        </div>
-        <div className={styles.column}>
-          <VentajasLogisticas />
-        </div>
+      <div className={styles.column}>
+        <EjemplosUso />
+        {/* <VentajasLogisticas /> */}
       </div>
     </section>
 

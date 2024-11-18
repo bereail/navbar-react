@@ -17,6 +17,7 @@
   /* Color de texto */
   line-height: 1.6;
   /* Espacio entre líneas */
+  max-height: 100vh;
 }
 
 h2 {

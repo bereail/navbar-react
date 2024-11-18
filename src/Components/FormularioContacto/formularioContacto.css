@@ -1,0 +1,51 @@
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.close{
+    width: 20px;
+    height: 20px;
+    color: black;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.form label {
+    margin: 4px 0 4px 0;
+}
+
+
+.form input {
+    padding: 4px 16px;
+}
+
+.btn-enviar{
+    background-color: rgb(63, 200, 61, 0.9);
+    color: white;
+    align-self: flex-end;
+    margin: 16px 0 0 0;
+    padding: 4px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-enviar:active {
+    transform: scale(0.95);
+    background-color: rgb(63, 200, 61);
+}
+
+.btn-enviar:hover{
+    background-color: rgba(63, 200, 61);
+}
+
+.btn-enviar:focus {
+    outline: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
