@@ -9,9 +9,99 @@
   text-align: center;
 }
 
-.title-nosotros {
-  margin: 36px 0;
+.banner-nosotros {
   position: relative;
+  width: 100%;
+  height: 400px; /* Altura del banner */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  overflow: hidden; /* Evita que la imagen salga del contenedor */
+}
+
+.banner-nosotros .banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen cubra el área del contenedor */
+  object-position: bottom center; /* Mueve la imagen para mostrar más la parte inferior */
+}
+
+.text-overlay {
+  position: absolute;
+  right: 0px;
+  top: 30%;
+  left: 20%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  z-index: 10;
+  line-height: 1.2;
+  animation: fadeIn 1s ease-out;
+  display: grid;
+  justify-items: center; /* Centra los elementos horizontalmente */
+  grid-template-rows: auto auto; /* Define dos filas para "SOBRE" y "NOSOTROS" */
+}
+
+.text-overlay .sobre,
+.text-overlay .nosotros {
+  display: block;
+  margin-bottom: 5px;
+}
+.sobre {
+  /* Estilos para "SOBRE" si es necesario */
+}
+
+.nosotros {
+  margin-top: 10px; /* Ajusta el espacio entre "SOBRE" y "NOSOTROS" */
+}
+
+
+/* Animación de la imagen (zoom y desplazamiento) */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%); /* Desplaza la imagen desde la derecha */
+  }
+  100% {
+    transform: translateX(0); /* Deja la imagen en su posición original */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.text-overlay {
+  animation: fadeIn 1s ease-out;
+}
+
+.text-line {
+  display: block;
+}
+
+.title-nosotros {
+  margin: 50px;
+  position: center;
+  font-size: 4rem;
+  color: #f8ac39;
+  font-weight: bold;
+  text-align: center;
+  transform: translateY(50px); /* Comienza desplazado hacia abajo */
+  animation: slideUp 1s ease-out 4s forwards; /* Desplaza el título desde abajo */
 }
 
 .title-nosotros::after {
@@ -28,7 +118,6 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-
 .section {
   margin-bottom: 0;
   display: flex;
@@ -42,28 +131,34 @@
 }
 
 .card-descripcion-empresa {
-  margin: 0 86px 20px;
-  padding: 44px 36px;
-  border: 1px solid rgba(128, 128, 128, 0.629);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
+  margin: 0 auto 20px; /* Centramos la tarjeta horizontalmente */
+  padding: 30px  5px; /* Reducimos el padding para que la tarjeta quede más ajustada */
+  border-radius: 8px; /* Menos redondeo en las esquinas */
   opacity: 0;
+  font-size:  5rem;
   transform: translateY(20px);
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
+  max-width: 800px; /* Definimos un ancho máximo */
+  width: 100%; /* La tarjeta ocupa todo el ancho disponible hasta 600px */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
 .card-descripcion-empresa h3 {
-  margin: 0 0 24px;
+  margin: 10 0 16px; /* Reducimos el margen inferior */
+  font-size:  4rem; /* Ajustamos el tamaño de fuente del título */
 }
 
 .card-descripcion-empresa p {
   text-align: justify;
+  line-height: 1.6; /* Mejoramos la legibilidad con más espacio entre líneas */
+  font-size: 1.5rem; /* Ajustamos el tamaño del texto */
 }
 
+
 .btn-contacto {
-  background-color: rgba(63, 200, 61, 0.9);
+  background-color: rgb(240, 163, 21);
   color: white;
   padding: 8px 16px;
   border-radius: 8px;
@@ -143,7 +238,7 @@
 @keyframes slideInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-100px);
   }
   100% {
     opacity: 1;
@@ -154,32 +249,10 @@
 @keyframes slideInRight {
   0% {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(100px);
   }
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-@media (max-width: 768px) {
-  .section-filosofia-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .section-filosofia-container img {
-    margin: 0 0 20px;
-    width: 80%;
-  }
-
-  .content-filosofia-container {
-    flex-direction: column;
-    margin: 0 20px;
-  }
-
-  .content-filosofia {
-    margin: 20px 0;
-    padding: 0 20px;
   }
 }

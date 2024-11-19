@@ -59,17 +59,6 @@ const EjemplosUso = () => {
         </div>
       </div>
 
-     {/*  <div className={styles.card}>
-        <img
-          src={currentExample.image}
-          alt={currentExample.title}
-          className={styles.cardImage}
-        />
-        <div className={styles.cardBody}>
-          <h5 className={styles.cardTitle}>{currentExample.title}</h5>
-          <p className={styles.cardText}>{currentExample.description}</p>
-        </div>
-      </div> */}
     </div>
   );
 };

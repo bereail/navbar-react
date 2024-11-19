@@ -7,7 +7,6 @@ import Contacto from './Screens/Contacto/Contacto';
 import Sostenibilidad from './Screens/Sostenibilidad/Sostenibilidad';
 import NuestrosProductos from './Screens/NuestrosProductos/NuestrosProductos';
 import Comercializacion from './Screens/Comercializacion/Comercializacion';
-import Ventajas from './Screens/Ventajas/Ventajas';
 import { Element } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -19,7 +18,6 @@ function App() {
       <Navbar />
       <Router>
       <Routes>
-            <Route path="/" element={<Inicio />} />
             <Route path="/nosotros" element={<Nosotros />} /> 
           </Routes>
       <main style={{ flex: 1 }}>

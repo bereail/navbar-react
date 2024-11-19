@@ -7,6 +7,12 @@
   justify-content: center;
   gap: 20px; /* Ajusta el espacio entre secciones */
   padding: 20px;
+  background-image: url('../../assets/Rino.png');
+  background-repeat: no-repeat;
+  background-size: cover; /* Ajusta para que la imagen ocupe todo el contenedor */
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.5); /* Blanco semitransparente */
+  background-blend-mode: overlay; /* Mezcla el color con la imagen */
 }
 
 .ecoCards, .beneficiosEcologicos {

@@ -1,0 +1,15 @@
+.description {
+    font-size: 5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .description {
+      font-size: 1.2rem;
+    }
+  }
+
+  .title {
+    font-size: 3rem;
+    text-align: left;
+    color: #f8ac39;
+  }

@@ -7,7 +7,8 @@ import styles from '../NuestrosProductos/NuestrosProductos.module.css';
 import CarouselProductos from '../../Components/Carousel/CarouselProductos';
 import { faLayerGroup, faWeightHanging, faBoxesStacked } from '@fortawesome/free-solid-svg-icons'
 import EjemplosUso from '../../Components/EjemplosUso/EjemplosUso';
-import VentajasLogisticas from '../../Components/VentajasLogisticas/VentajasLogisticas';
+import VentajasLogisticas from './VentajasLogisticas/VentajasLogisticas';
+
 
 
 const PRODUCTOS = [
@@ -88,12 +89,12 @@ const PRODUCTOS = [
 const NuestrosProductos = () => {
   return (
     <section className={styles.section}>
-      <h2>Nuestros Productos</h2>
+      <h2 className={styles.title}>Nuestros Productos</h2>
       <CarouselProductos productos={PRODUCTOS} />
 
       <div className={styles.column}>
         <EjemplosUso />
-        {/* <VentajasLogisticas /> */}
+        <VentajasLogisticas />
       </div>
     </section>
 

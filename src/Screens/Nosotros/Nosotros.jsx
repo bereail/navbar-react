@@ -1,14 +1,14 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../../assets/logo.png';
 import NosotrosEmpresa from '../../assets/NosotrosEmpresa.png';
 import './nosotros.css';
 import useObserver from '../../Hooks/useObserver';
+import MisionVision from './MisionVision/MisionVision';
+
 
 function Nosotros() {
   const [isCardVisible, cardRef] = useObserver();
-  const [isMissionVisible, missionRef] = useObserver();
-  const [isVisionVisible, visionRef] = useObserver();
+
   const [isTitleVisible, setIsTitleVisible] = React.useState(false);
 
   React.useEffect(() => {
@@ -20,7 +20,16 @@ function Nosotros() {
   }, []);
 
   return (
-    <div className="container-nosotros">
+<div className="container-nosotros">
+  <div className="banner-nosotros">
+    <img src={NosotrosEmpresa} alt="Banner Nosotros" className="banner-image" />
+    <h3 className="text-overlay">
+      <span className="sobre">SOBRE</span>
+      <span className="nosotros">NOSOTROS</span>
+    </h3>
+  </div>
+
+<div className='quienes-somos'>
       <h3
         className={`title-nosotros ${isTitleVisible ? 'animate' : ''}`}
       >
@@ -35,54 +44,22 @@ function Nosotros() {
           className={`card-descripcion-empresa ${isCardVisible ? 'animate' : ''}`}
         >
           <p>
-            <strong>ULTRACORR SAS</strong> es una empresa dedicada a la fabricación de envases especiales y
-            soluciones de packaging sostenible, diseñadas para satisfacer las necesidades del mercado local e
-            internacional.
+            <strong>ULTRACORR SAS</strong> ULTRACOR SAS es una Empresa dedicada la fabricación de Envases especiales y a dar soluciones de packaging sostenible.
           </p>
           <p>
-            Nos distinguimos por nuestra calidad, eficiencia y precios competitivos, lo que nos posiciona como una opción
-            preferente en la industria. Ofrecemos envases de cartón corrugado personalizados, adaptados a los desafíos
-            específicos de cada cliente.
+          Nuestros productos y servicios están dirigidos tanto al mercado local como al internacional, buscando satisfacer las demandas de un público diverso y exigente, manteniendo un compromiso constante con la excelencia y la mejora continua.
           </p>
           <p>
-            Aunque somos una empresa joven, contamos con más de 20 años de experiencia en el sector, combinando innovación
-            y conocimiento para brindar soluciones de excelencia, comprometidas con la sostenibilidad y la mejora continua.
+          Nos distinguimos por nuestra calidad, eficiencia y precios competitivos, elementos que nos posicionan como una opción preferente en el mercado.
           </p>
+          <p>Para ello ofrecemos una solución de alta calidad en el diseño y desarrollo de envases de cartón corrugado, con soluciones individuales para desafíos en el packaging de su Empresa.</p>
         </div>
-        <button className="btn-contacto">Contáctenos</button>
+        <button className="btn-contacto" onClick={() => document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' })}>
+  Contáctenos
+</button>
       </section>
-
-      <section className="section">
-        <div className="section-filosofia-container">
-          <img src={logo} alt="Logo de la empresa" />
-          <div className="content-filosofia-container">
-            <div
-              ref={missionRef}
-              className={`content-filosofia ${isMissionVisible ? 'slide-left' : ''}`}
-            >
-              <h3 className="title">Misión</h3>
-              <p className="description">
-                Proveer soluciones extraordinarias en envases y embalajes, contribuyendo a reducir el impacto ecológico
-                de las actividades de nuestros clientes. Optimización del uso de mercancías mediante materiales de bajo
-                costo y respetuosos con el medio ambiente. Fomentar relaciones duraderas con nuestros clientes, basadas
-                en un trato profesional y amable.
-              </p>
-            </div>
-
-            <div
-              ref={visionRef}
-              className={`content-filosofia ${isVisionVisible ? 'slide-right' : ''}`}
-            >
-              <h3 className="title">Visión</h3>
-              <p className="description">
-                Ser líderes en el desarrollo de soluciones innovadoras en envases y embalajes, contribuyendo al
-                crecimiento sostenible de nuestros clientes y promoviendo un entorno empresarial responsable con el medio
-                ambiente.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+      <MisionVision />
     </div>
   );
 }
