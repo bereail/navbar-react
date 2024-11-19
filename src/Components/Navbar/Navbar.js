@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import logo from '../../assets/logo.jpg'; // Make sure the logo file is transparent
+import logo from '../../assets/logo.png';
 import styles from './NavBar.module.css';
+import { Link as RouterLink } from 'react-router-dom'; // Para la navegación de rutas
+
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);

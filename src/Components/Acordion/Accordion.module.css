@@ -1,32 +1,65 @@
 .accordionSection {
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-  }
-  
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 5px; /* Mejora estética */
+  overflow: hidden; /* Evita que contenido desbordado se vea */
+}
+
+.accordionHeader {
+  background-color: #f0f0f0;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 16px; /* Tamaño base */
+  transition: background-color 0.3s ease;
+}
+
+.accordionContent {
+  padding: 10px 15px;
+  background-color: #fff;
+  font-size: 14px; /* Ajusta el tamaño en dispositivos pequeños */
+}
+
+.icon {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.accordionHeader:hover {
+  background-color: #e0e0e0;
+}
+
+.accordionHeader:focus {
+  outline: none;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
   .accordionHeader {
-    background-color: #f0f0f0;
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    font-size: 14px; /* Texto más pequeño */
+    padding: 8px 12px; /* Espaciado reducido */
   }
-  
-  .accordionContent {
-    padding: 10px;
-  }
-  
+
   .icon {
-    font-size: 18px;
-    transition: transform 0.3s ease;
+    font-size: 16px; /* Icono más pequeño */
   }
-  
-  .accordionHeader:hover {
-    background-color: #e0e0e0;
+
+  .accordionContent {
+    font-size: 13px; /* Ajuste del texto */
+    padding: 8px 12px; /* Margen más pequeño */
   }
-  
-  .accordionHeader:focus {
-    outline: none;
+}
+
+@media (max-width: 480px) {
+  .accordionHeader {
+    flex-direction: column; /* Cambia la disposición */
+    align-items: flex-start; /* Alinea el texto al inicio */
   }
-  
+
+  .icon {
+    margin-top: 5px; /* Espacio entre texto e ícono */
+  }
+}

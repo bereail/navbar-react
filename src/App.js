@@ -10,12 +10,18 @@ import Comercializacion from './Screens/Comercializacion/Comercializacion';
 import Ventajas from './Screens/Ventajas/Ventajas';
 import { Element } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Slider from './Components/Slider/Slider';
 function App() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Navbar />
+      <Router>
+      <Routes>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/nosotros" element={<Nosotros />} /> 
+          </Routes>
       <main style={{ flex: 1 }}>
         <Element name="Inicio">
           <Inicio />
@@ -37,6 +43,7 @@ function App() {
         </Element>
       </main>
       <Footer />
+      </Router>
     </div>
   );
 }
