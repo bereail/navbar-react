@@ -3,14 +3,11 @@ import cajonEspecial from '../../assets/cajonEspecial.png';
 import Ultrabox1200 from '../../assets/contenedorEstandarUltraboxA1200.png';
 import Ultrabin500 from '../../assets/35.png';
 import Ultrabin1000 from '../../assets/octobin2.png';
-import styles from './NuestrosProductos.module.css';
-import Slider from 'react-slick';  // Import Slider from react-slick
-import { faLayerGroup, faWeightHanging, faBoxesStacked } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
 import EjemplosUso from '../../Components/EjemplosUso/EjemplosUso';
 import VentajasLogisticas from './VentajasLogisticas/VentajasLogisticas';
 import Productos from '../../Components/Productos/Productos';
 import './nuestrosProductos.css'
+
 const PRODUCTOS = [
   {
     id: 1,
@@ -58,34 +55,11 @@ const PRODUCTOS = [
   },
 ];
 
-const settings = {
-  infinite: true,  // Infinite loop
-  speed: 500,  // Slide speed
-  slidesToShow: 3,  // Show 3 products at a time
-  slidesToScroll: 1,  // Scroll one product at a time
-  responsive: [
-    {
-      breakpoint: 1024,  // For screens smaller than 1024px, show 2 slides
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 600,  // For screens smaller than 600px, show 1 slide
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
-
 const NuestrosProductos = () => {
   return (
     <section className='section-productos'>
       <h2 className='section-productos-title'>Nuestros Productos</h2>
-      {/* <CarouselProductos productos={PRODUCTOS} /> */}
+
       <Productos productos={PRODUCTOS} />
       <EjemplosUso />
       <VentajasLogisticas />
