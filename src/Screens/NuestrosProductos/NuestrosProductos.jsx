@@ -90,7 +90,7 @@ const NuestrosProductos = () => {
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>Nuestros Productos</h2>
-      <CarouselProductos productos={PRODUCTOS} />
+      {/* <CarouselProductos productos={PRODUCTOS} /> */}
 
       <div className={styles.column}>
         <EjemplosUso />
