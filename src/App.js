@@ -10,40 +10,47 @@ import Comercializacion from './Screens/Comercializacion/Comercializacion';
 import { Element } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Slider from './Components/Slider/Slider';
-function App() {
 
+function App() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Navbar />
-      <Router>
-      <Routes>
-            <Route path="/nosotros" element={<Nosotros />} /> 
+    <Router>
+      <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+        <Navbar />
+        <main style={{ flex: 1 }}>
+          <Routes>
+           
+            <Route
+              path="/"
+              element={
+                <div>
+                  <section id='Inicio'>
+                    <Inicio />
+                  </section>
+                  <section id="NuestrosProductos">
+                    <NuestrosProductos />
+                  </section>
+                  <section id="Sostenibilidad">
+                    <Sostenibilidad />
+                  </section>
+                  <section id="Comercializacion">
+                    <Comercializacion />
+                  </section>
+                  <section id="Contacto">
+                    <Contacto />
+                  </section>
+                </div>
+              }
+            />
+
+            {/* Página Nosotros */}
+            <Route path="/nosotros" element={<Nosotros />} />
           </Routes>
-      <main style={{ flex: 1 }}>
-        <Element name="Inicio">
-          <Inicio />
-        </Element>
-        <Element name="Nosotros">
-          <Nosotros />
-        </Element>
-        <Element name="Nuestros Productos">
-          <NuestrosProductos />
-        </Element>
-        <Element name="Sostenibilidad">
-          <Sostenibilidad />
-        </Element>
-        <Element name="Comercializacion">
-          <Comercializacion />
-        </Element>
-        <Element name="Contacto">
-          <Contacto />
-        </Element>
-      </main>
-      <Footer />
-      </Router>
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
