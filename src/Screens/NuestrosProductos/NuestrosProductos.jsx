@@ -3,6 +3,7 @@ import cajonEspecial from '../../assets/cajonEspecial.png';
 import Ultrabox1200 from '../../assets/contenedorEstandarUltraboxA1200.png';
 import Ultrabin500 from '../../assets/35.png';
 import Ultrabin1000 from '../../assets/octobin2.png';
+import { faLayerGroup, faWeightHanging, faBoxesStacked } from '@fortawesome/free-solid-svg-icons';
 import EjemplosUso from '../../Components/EjemplosUso/EjemplosUso';
 import VentajasLogisticas from './VentajasLogisticas/VentajasLogisticas';
 import Productos from '../../Components/Productos/Productos';
@@ -59,7 +60,7 @@ const NuestrosProductos = () => {
   return (
     <section className='section-productos'>
       <h2 className='section-productos-title'>Nuestros Productos</h2>
-
+      {/* <CarouselProductos productos={PRODUCTOS} /> */}
       <Productos productos={PRODUCTOS} />
       <EjemplosUso />
       <VentajasLogisticas />
