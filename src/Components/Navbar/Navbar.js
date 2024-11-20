@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import logo from '../../assets/logo.png';
 import styles from './NavBar.module.css';
-import { Link as RouterLink } from 'react-router-dom'; // Para la navegación de rutas
-
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isGreen, setIsGreen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,11 +16,10 @@ const Navbar = () => {
 
       const sostenibilidadSection = document.getElementById('Sostenibilidad');
       if (sostenibilidadSection) {
-        const sectionTop = sostenibilidadSection.offsetTop; // Get the top position of the section
-        const sectionHeight = sostenibilidadSection.offsetHeight; // Get the section's height
+        const sectionTop = sostenibilidadSection.offsetTop;
+        const sectionHeight = sostenibilidadSection.offsetHeight;
 
-        // Check if the navbar is within the section's vertical bounds
-        setIsGreen(offset >= sectionTop && offset <= (sectionTop + sectionHeight));
+        setIsGreen(offset >= sectionTop && offset <= sectionTop + sectionHeight);
       }
     };
 
@@ -30,6 +29,8 @@ const Navbar = () => {
     };
   }, []);
 
+  const isMainPage = location.pathname === '/';
+
   return (
     <nav
       className={`${styles.navbar} navbar navbar-expand-sm fixed-top ${scrolled ? styles.solid : styles.transparent} ${
@@ -37,8 +38,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container-fluid">
-        {/* Logo with transparent background */}
-        <a className={styles['navbar-brand']} href="#Inicio">
+        <a className={styles['navbar-brand']} href="/">
           <img src={logo} alt="Logo" className={styles.logo} />
         </a>
         <button
@@ -54,17 +54,58 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            {['Inicio', 'Nosotros', 'Nuestros Productos', 'Sostenibilidad', 'Comercializacion', 'Contacto'].map((section) => (
-              <li className="nav-item" key={section}>
+            {/* Primero: Inicio */}
+            <li className="nav-item">
+              {isMainPage ? (
                 <Link
                   className={`${styles['nav-link']} nav-link`}
-                  to={section}
+                  to="Inicio"
                   smooth={true}
                   duration={500}
                   activeClass="active"
                 >
-                  {section.toUpperCase()}
+                  INICIO
                 </Link>
+              ) : (
+                <RouterLink
+                  className={`${styles['nav-link']} nav-link`}
+                  to="/"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                >
+                  INICIO
+                </RouterLink>
+              )}
+            </li>
+
+            {/* Segundo: Nosotros */}
+            <li className="nav-item">
+              <RouterLink className={`${styles['nav-link']} nav-link`} to="/Nosotros">
+                NOSOTROS
+              </RouterLink>
+            </li>
+
+            {/* Tercero en adelante: Otras secciones */}
+            {['Nuestros Productos', 'Sostenibilidad', 'Comercializacion', 'Contacto'].map((section) => (
+              <li className="nav-item" key={section}>
+                {isMainPage ? (
+                  <Link
+                    className={`${styles['nav-link']} nav-link`}
+                    to={section}
+                    smooth={true}
+                    duration={500}
+                    activeClass="active"
+                  >
+                    {section.toUpperCase()}
+                  </Link>
+                ) : (
+                  <RouterLink
+                    className={`${styles['nav-link']} nav-link`}
+                    to={`/#${section}`}
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  >
+                    {section.toUpperCase()}
+                  </RouterLink>
+                )}
               </li>
             ))}
           </ul>

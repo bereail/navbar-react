@@ -1,3 +1,4 @@
+// MainPage.js
 import React from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
@@ -10,37 +11,50 @@ import Comercializacion from './Screens/Comercializacion/Comercializacion';
 import { Element } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Slider from './Components/Slider/Slider';
-function App() {
 
+function MainPage() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <>
       <Navbar />
-      <Router>
-      <Routes>
-            <Route path="/nosotros" element={<Nosotros />} /> 
-          </Routes>
       <main style={{ flex: 1 }}>
-        <Element name="Inicio">
+        <Element name="Inicio" id="Inicio">
           <Inicio />
         </Element>
-        <Element name="Nosotros">
-          <Nosotros />
-        </Element>
-        <Element name="Nuestros Productos">
+        <Element name="Nuestros Productos" id="NuestrosProductos">
           <NuestrosProductos />
         </Element>
-        <Element name="Sostenibilidad">
+        <Element name="Sostenibilidad" id="Sostenibilidad">
           <Sostenibilidad />
         </Element>
-        <Element name="Comercializacion">
+        <Element name="Comercializacion" id="Comercializacion">
           <Comercializacion />
         </Element>
-        <Element name="Contacto">
+        <Element name="Contacto" id="contacto">
           <Contacto />
         </Element>
       </main>
       <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route
+            path="/Nosotros"
+            element={
+              <>
+                <Navbar />
+                <Nosotros />
+                <Footer />
+              </>
+            }
+          />
+        </Routes>
       </Router>
     </div>
   );

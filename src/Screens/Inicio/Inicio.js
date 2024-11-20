@@ -13,7 +13,7 @@ function Inicio() {
         <p className={styles.inicioParagraph}>Explora nuestros productos y descubre más sobre nosotros</p>
         <div className={styles.inicioButtonsContainer}>
           <a href="#NuestrosProductos" className={styles.inicioButtonNaranja}>Ver Productos</a>
-          <a href="#Nosotros" className={styles.inicioButtonVerde}>Conocer más</a>
+          <a href="Nosotros" className={styles.inicioButtonVerde}>Conocer más</a>
         </div>
       </div>
     </section>

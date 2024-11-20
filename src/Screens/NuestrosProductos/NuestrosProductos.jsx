@@ -3,13 +3,14 @@ import cajonEspecial from '../../assets/cajonEspecial.png';
 import Ultrabox1200 from '../../assets/contenedorEstandarUltraboxA1200.png';
 import Ultrabin500 from '../../assets/35.png';
 import Ultrabin1000 from '../../assets/octobin2.png';
-import styles from '../NuestrosProductos/NuestrosProductos.module.css';
-import CarouselProductos from '../../Components/Carousel/CarouselProductos';
-import { faLayerGroup, faWeightHanging, faBoxesStacked } from '@fortawesome/free-solid-svg-icons'
+import styles from './NuestrosProductos.module.css';
+import Slider from 'react-slick';  // Import Slider from react-slick
+import { faLayerGroup, faWeightHanging, faBoxesStacked } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
 import EjemplosUso from '../../Components/EjemplosUso/EjemplosUso';
 import VentajasLogisticas from './VentajasLogisticas/VentajasLogisticas';
-
-
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const PRODUCTOS = [
   {
@@ -17,87 +18,94 @@ const PRODUCTOS = [
     title: 'Ultrabin 1000',
     description: 'Solución innovadora para almacenamiento',
     img: Ultrabin1000,
-    features: [{
-      icon: faLayerGroup,
-      description: 'Construido a partir de dos capas de cartón corrugado reforzado'
-    },
-    {
-      icon: faWeightHanging,
-      description: 'Resiste cargas pesadas de hasta 1000 kg'
-    },
-    {
-      icon: faBoxesStacked,
-      description: 'Su forma octagonal permite enviar 200 litros más por posición en comparación con tambores de 200 litros'
-    }]
+    features: [
+      { icon: faLayerGroup, description: 'Construido a partir de dos capas de cartón corrugado reforzado' },
+      { icon: faWeightHanging, description: 'Resiste cargas pesadas de hasta 1000 kg' },
+      { icon: faBoxesStacked, description: 'Su forma octagonal permite enviar 200 litros más por posición' },
+    ],
   },
   {
     id: 2,
     title: 'Cajones Especiales',
     description: 'Contenedor especial para productos delicados',
     img: cajonEspecial,
-    features: [{
-      icon: faLayerGroup,
-      description: 'Caracteristica'
-    },
-    {
-      icon: faWeightHanging,
-      description: 'Caracteristica'
-    },
-    {
-      icon: faBoxesStacked,
-      description: 'Caracteristica'
-    }]
+    features: [
+      { icon: faLayerGroup, description: 'Características específicas para productos delicados' },
+      { icon: faWeightHanging, description: 'Resiste cargas moderadas' },
+      { icon: faBoxesStacked, description: 'Apilable para facilitar el transporte' },
+    ],
   },
   {
     id: 3,
     title: 'Ultrabox 1200',
-    description: 'Contenedor estandar de gran capacidad y durabilidad',
+    description: 'Contenedor estándar de gran capacidad',
     img: Ultrabox1200,
-    features: [{
-      icon: faLayerGroup,
-      description: 'Construido a partir de múltiples capas de cartón corrugado de doble onda'
-    },
-    {
-      icon: faWeightHanging,
-      description: 'Resiste cargas pesadas de hasta 1200 kg'
-    },
-    {
-      icon: faBoxesStacked,
-      description: 'Puede ser apilado hasta 3 en altura permitiendo un máximo aprovechamiento del espacio de carga'
-    }]
+    features: [
+      { icon: faLayerGroup, description: 'Construcción de doble capa' },
+      { icon: faWeightHanging, description: 'Resiste hasta 1200 kg' },
+      { icon: faBoxesStacked, description: 'Permite apilar hasta 3 unidades por altura' },
+    ],
   },
   {
     id: 4,
     title: 'Ultrabin 500',
-    description: 'Diseño octogonal para un uso óptimo del espacio',
+    description: 'Diseño octogonal para optimizar espacio',
     img: Ultrabin500,
-    features: [{
-      icon: faLayerGroup,
-      description: 'Construido a partir de dos capas de cartón corrugado reforzado'
+    features: [
+      { icon: faLayerGroup, description: 'Construcción resistente' },
+      { icon: faWeightHanging, description: 'Soporta hasta 500 kg' },
+      { icon: faBoxesStacked, description: 'Mejor aprovechamiento del espacio en el transporte' },
+    ],
+  },
+];
+
+const settings = {
+  infinite: true,  // Infinite loop
+  speed: 500,  // Slide speed
+  slidesToShow: 3,  // Show 3 products at a time
+  slidesToScroll: 1,  // Scroll one product at a time
+  responsive: [
+    {
+      breakpoint: 1024,  // For screens smaller than 1024px, show 2 slides
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
     },
     {
-      icon: faWeightHanging,
-      description: 'Resiste cargas pesadas de hasta 500 kg'
+      breakpoint: 600,  // For screens smaller than 600px, show 1 slide
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
     },
-    {
-      icon: faBoxesStacked,
-      description: 'Su forma octogonal optimiza el espacio de transporte en comparacion con un diseño cilíndrico'
-    }]
-  }
-]
+  ],
+};
 
 const NuestrosProductos = () => {
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>Nuestros Productos</h2>
-      <CarouselProductos productos={PRODUCTOS} />
-
-      <div className={styles.column}>
-        <EjemplosUso />
-        <VentajasLogisticas />
-      </div>
+      <Slider {...settings}>
+        {PRODUCTOS.map((producto) => (
+          <div key={producto.id} className={styles.productCard}>
+            <img src={producto.img} alt={producto.title} className={styles.productImage} />
+            <h3 className={styles.productTitle}>{producto.title}</h3>
+            <p className={styles.productDescription}>{producto.description}</p>
+            <div className={styles.featuresContainer}>
+              {producto.features.map((feature, index) => (
+                <div key={index} className={styles.feature}>
+                  <FontAwesomeIcon icon={feature.icon} aria-hidden="true" /> {/* Corrected icon usage */}
+                  <p>{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </Slider>
+      <EjemplosUso />
+      <VentajasLogisticas />
     </section>
-
   );
 };
 

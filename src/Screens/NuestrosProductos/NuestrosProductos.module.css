@@ -1,81 +1,44 @@
-
-.section {
-  padding:  80px 20px;
-  background-color: #f4f4f4;  
-  text-align: center;
-  min-height: 200vh;
+/* Individual product card styling */
+.productCard {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  width: 250px;
+  margin:  15px; /* Margen izquierdo y derecho para separar los productos */
+  margin-bottom: 20px; /* Margen inferior para separarlos verticalmente */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+  opacity: 1;
+}
+
+
+.productImage {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.featuresContainer {
+  margin-top: 10px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.feature i {
+  color: #5a5a5a; /* Change icon color */
 }
 
 .title {
-  color: #33c86d;
-  font-size: 3em;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px; 
-  margin-top: 30px;
-}
-
-.column {
-  flex: 1; 
-  min-width: 300px; 
-}
-
-
-.container {
-  display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se adapten en pantallas pequeñas */
-  gap: 20px; /* Espaciado entre los componentes */
-  justify-content: space-between; /* Distribuye los componentes */
-  align-items: flex-start; /* Alinea los componentes al inicio vertical */
-  padding: 20px;
-}
-
-.container > * {
-  flex: 1; /* Asegura que ambos componentes ocupen el mismo espacio */
-  min-width: 300px; /* Evita que se vuelvan demasiado pequeños en pantallas pequeñas */
-}
-
-h2 {
-  margin-bottom: 2rem;
-  margin-top: 3.2rem;
-  color: #333;  
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 2.5em;
-  font-weight: bolder;
+  color: green;
+  font-size: 4em;
   text-align: center;
-  position: relative;
-}
-
-.slider-container {
-  margin-top: 20px;
-}
-
-.button-container {
-  margin-top: 30px;
-}
-
-.button-cotizacion {
-  background-color: #FFA500 !important;  
-  color: white;
-  font-size: 1rem;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button-cotizacion:hover {
-  background-color: #FF8C00;  
-}
-
-.button-cotizacion:focus {
-  outline: none;
 }
