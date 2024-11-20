@@ -86,25 +86,12 @@ const NuestrosProductos = () => {
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>Nuestros Productos</h2>
-      <Slider {...settings}>
-        {PRODUCTOS.map((producto) => (
-          <div key={producto.id} className={styles.productCard}>
-            <img src={producto.img} alt={producto.title} className={styles.productImage} />
-            <h3 className={styles.productTitle}>{producto.title}</h3>
-            <p className={styles.productDescription}>{producto.description}</p>
-            <div className={styles.featuresContainer}>
-              {producto.features.map((feature, index) => (
-                <div key={index} className={styles.feature}>
-                  <FontAwesomeIcon icon={feature.icon} aria-hidden="true" /> {/* Corrected icon usage */}
-                  <p>{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </Slider>
-      <EjemplosUso />
-      <VentajasLogisticas />
+      {/* <CarouselProductos productos={PRODUCTOS} /> */}
+
+      <div className={styles.column}>
+        <EjemplosUso />
+        <VentajasLogisticas />
+      </div>
     </section>
   );
 };

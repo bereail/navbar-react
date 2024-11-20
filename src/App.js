@@ -12,52 +12,46 @@ import { Element } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function MainPage() {
-  return (
-    <>
-      <Navbar />
-      <main style={{ flex: 1 }}>
-        <Element name="Inicio" id="Inicio">
-          <Inicio />
-        </Element>
-        <Element name="Nuestros Productos" id="NuestrosProductos">
-          <NuestrosProductos />
-        </Element>
-        <Element name="Sostenibilidad" id="Sostenibilidad">
-          <Sostenibilidad />
-        </Element>
-        <Element name="Comercializacion" id="Comercializacion">
-          <Comercializacion />
-        </Element>
-        <Element name="Contacto" id="contacto">
-          <Contacto />
-        </Element>
-      </main>
-      <Footer />
-    </>
-  );
-}
-
 function App() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route
-            path="/Nosotros"
-            element={
-              <>
-                <Navbar />
-                <Nosotros />
-                <Footer />
-              </>
-            }
-          />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+        <Navbar />
+        <main style={{ flex: 1 }}>
+          <Routes>
+           
+            <Route
+              path="/"
+              element={
+                <div>
+                  <section id='Inicio'>
+                    <Inicio />
+                  </section>
+                  <section id="NuestrosProductos">
+                    <NuestrosProductos />
+                  </section>
+                  <section id="Sostenibilidad">
+                    <Sostenibilidad />
+                  </section>
+                  <section id="Comercializacion">
+                    <Comercializacion />
+                  </section>
+                  <section id="Contacto">
+                    <Contacto />
+                  </section>
+                </div>
+              }
+            />
+
+            {/* Página Nosotros */}
+            <Route path="/nosotros" element={<Nosotros />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
