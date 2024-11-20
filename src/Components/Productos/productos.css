@@ -13,3 +13,13 @@
     justify-content: center;
     margin: 0 20px;
 }
+
+@media (max-width: 768px) {
+    .productos-container {
+        flex-direction: column; /* Los productos se mostrarán en columna */
+    }
+
+    .arrow-left, .arrow-right {
+        margin: 10px 0; /* Ajuste el espacio en móviles */
+    }
+}

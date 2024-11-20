@@ -60,7 +60,6 @@ const NuestrosProductos = () => {
   return (
     <section className='section-productos'>
       <h2 className='section-productos-title'>Nuestros Productos</h2>
-      {/* <CarouselProductos productos={PRODUCTOS} /> */}
       <Productos productos={PRODUCTOS} />
       <EjemplosUso />
       <VentajasLogisticas />
