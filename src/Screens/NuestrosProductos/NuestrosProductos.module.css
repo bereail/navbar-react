@@ -1,5 +1,8 @@
-/* Individual product card styling */
-.productCard {
+.section {
+  padding:  80px 20px;
+  background-color: #f4f4f4;  
+  text-align: center;
+  min-height: 200vh;
   display: flex;
   flex-direction: column;
   align-items: center;
