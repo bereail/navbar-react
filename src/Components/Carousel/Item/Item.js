@@ -1,22 +1,22 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import './item.css'
 
-const Item = ({ producto }) => {
+const Item = ({ producto, handleModalToggle }) => {
+  
   return (
-    <div class="card-container" >
-      <div class="card" >
-        <div class="card-front">
+    <div className="card-container" >
+      <div className="card" >
+        <div className="card-front">
           <div className='img-container'>
-            <img src={producto.img} class="card-img-top" alt={producto.title} />
+            <img src={producto.img} className="card-img-top" alt={producto.title} />
           </div>
-          <h5 class="card-title">{producto.title}</h5>
-          <p class="card-description">{producto.description}</p>
+          <h5 className="card-title">{producto.title}</h5>
+          <p className="card-description">{producto.description}</p>
         </div>
-        <div class="card-back">
+        <div className="card-back">
 
-          <h5 class="card-title card-title-back">{producto.title}</h5>
+          <h5 className="card-title card-title-back">{producto.title}</h5>
 
           <ul className='item-features-container'>
 
@@ -27,10 +27,10 @@ const Item = ({ producto }) => {
             )}
           </ul>
           <div className='button-container'>
-          <button className="btn-cotizar" onClick={() => alert('Solicitud de cotización enviada!')}>Solicitar Cotización</button>
+          <button className="btn-cotizar" onClick={handleModalToggle}>Solicitar Cotización</button>
           </div>
           
-
+          
         </div>
       </div>
     </div>
