@@ -6,7 +6,7 @@ import Ultrabin1000 from '../../assets/octobin2.png';
 import { faLayerGroup, faWeightHanging, faBoxesStacked } from '@fortawesome/free-solid-svg-icons';
 import EjemplosUso from '../../Components/EjemplosUso/EjemplosUso';
 import Productos from '../../Components/Productos/Productos';
-import VentajasLogistica from '../../Components/VentajasLogisticas/VentajasLogistica';
+
 import './nuestrosProductos.css'
 
 
@@ -63,7 +63,7 @@ const NuestrosProductos = () => {
       <h2 className='section-productos-title'>Nuestros Productos</h2>
       <Productos productos={PRODUCTOS} />
       <EjemplosUso />
-      <VentajasLogistica />
+
     </section>
   );
 };

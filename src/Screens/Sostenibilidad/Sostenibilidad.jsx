@@ -3,6 +3,9 @@ import { useTrail, animated } from '@react-spring/web';
 import styles from './Sostenibilidad.module.css';
 import EcoCards from './EcoCards/EcoCards';
 import BeneficiosEcologicos from './BeneficiosEcologicos/BeneficiosEcologicos';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';  // Importa los íconos de FontAwesome
+import { faLeaf, faRecycle, faTree, faTruck, faCloud } from '@fortawesome/free-solid-svg-icons';  // Importa íconos específicos
+
 
 const Sostenibilidad = () => {
   const items = [
@@ -21,11 +24,14 @@ const Sostenibilidad = () => {
 
   return (
     <section className={styles.section} id="Sostenibilidad">
-
-            <EcoCards />
-            <BeneficiosEcologicos />
-
-
+      <div className={styles.containerSostenibilidad}>
+            <h1 className={styles.titleSostenibilidad}>SOSTENIBILIDAD</h1>
+            <p className={styles.descripcion}> 
+          <strong>ULTRACOR</strong>  Diseña productos que equilibran las necesidades del cliente y el cuidado del medio ambiente.
+             </p>
+          <EcoCards />
+          <BeneficiosEcologicos />
+        </div>
     </section>
   );
 };
