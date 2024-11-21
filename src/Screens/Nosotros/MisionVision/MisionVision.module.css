@@ -1,15 +1,75 @@
+.sectionFilosofiaContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Para que todo ocupe el alto completo de la pantalla */
+  padding: 0 20px; /* Espaciado a los lados */
+}
+
+.contentFilosofiaContainer {
+  display: flex;
+  flex-direction: column; /* Cambié la dirección para que las secciones estén una debajo de la otra */
+  justify-content: center;
+  align-items: flex-start; /* Alineamos a la izquierda */
+  width: 100%;
+  margin-top: 20px; /* Espacio superior reducido */
+}
+
+.content-filosofia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(30px); /* Desplazamiento inicial hacia abajo */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transiciones para el efecto */
+}
+
+.content-filosofia.slide-left {
+  opacity: 1;
+  transform: translateX(-30px); /* Efecto de entrada desde la izquierda */
+}
+
+.content-filosofia.slide-right {
+  opacity: 1;
+  transform: translateX(30px); /* Efecto de entrada desde la derecha */
+}
+
+.title {
+  color: #ff7f00; /* Color naranja */
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
 .description {
-    font-size: 5rem;
-  }
-  
-  @media (min-width: 768px) {
-    .description {
-      font-size: 1.2rem;
-    }
+  font-size: 1.5rem;
+  color: #333; /* Color del texto */
+  margin-top: 10px; /* Espacio entre el título y la descripción */
+}
+
+img {
+  width: 70rem; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-bottom: 40px; /* Aumentamos el espacio entre el logo y las secciones */
+}
+
+@media (max-width: 768px) {
+  .sectionFilosofiaContainer {
+    flex-direction: column; /* Coloca el logo encima del texto en pantallas pequeñas */
+    align-items: center;
+    justify-content: center;
   }
 
-  .title {
-    font-size: 3rem;
-    text-align: left;
-    color: #f8ac39;
+  .contentFilosofiaContainer {
+    align-items: center; /* Centra los textos y las secciones */
   }
+
+  .content-filosofia {
+    margin: 20px 0; /* Espaciado entre las secciones */
+  }
+
+  img {
+    width: 120px; /* Reduce el tamaño del logo en pantallas más pequeñas */
+    margin-bottom: 20px; /* Ajusta el espacio en pantallas pequeñas */
+  }
+}
