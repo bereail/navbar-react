@@ -8,6 +8,7 @@ import EjemplosUso from '../../Components/EjemplosUso/EjemplosUso';
 import Productos from '../../Components/Productos/Productos';
 
 import './nuestrosProductos.css'
+import VentajasLogistica from '../../Components/VentajasLogisticas/VentajasLogistica';
 
 
 const PRODUCTOS = [
@@ -63,7 +64,7 @@ const NuestrosProductos = () => {
       <h2 className='section-productos-title'>NUESTROS PRODUCTOS</h2>
       <Productos productos={PRODUCTOS} />
       <EjemplosUso />
-
+<VentajasLogistica/>
     </section>
   );
 };
