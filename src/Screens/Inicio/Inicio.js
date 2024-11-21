@@ -6,7 +6,7 @@ function Inicio() {
     <section className={styles.inicioSection}>
       <div className={styles.inicioOverlay}></div>
       <div className={styles.inicioContent}>
-        <h1>
+        <h1  className={styles.inicioTitle}>
           <span>Innovación Joven</span>
           <span>Trayectoria Firme</span>
         </h1>

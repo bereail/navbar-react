@@ -4,27 +4,72 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 90px 0 0;
+  padding: 0; /* Elimina el padding superior */
   max-width: 100%;
   text-align: center;
 }
 
 .banner-nosotros {
-  position: relative;
   width: 100%;
-  height: 400px; /* Altura del banner */
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  overflow: hidden; /* Evita que la imagen salga del contenedor */
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  padding-top: 0; /* Asegúrate de que no haya padding arriba */
 }
 
 .banner-nosotros .banner-image {
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: center center;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Hace que la imagen cubra el área del contenedor */
-  object-position: bottom center; /* Mueve la imagen para mostrar más la parte inferior */
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
+
+
+.text-overlay .sobre,
+.text-overlay .nosotros {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 6rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.sobre {
+  font-weight: bold;
+  color: white;
+  display: block; /* Asegura que el texto "Sobre" sea un bloque, apilando el siguiente texto debajo */
+  margin-bottom: 5px; /* Añade un pequeño espacio entre "Sobre" y "Nosotros" */
+}
+
+.nosotros {
+  font-weight: bold;
+  color: white;
+  display: block; /* Asegura que "Nosotros" también sea un bloque */
+  margin-top: 0; /* No es necesario añadir espacio adicional si ya tienes el margin-bottom en "Sobre" */
+}
+
+
+
+.quienes-somos {
+  margin-bottom: 20px; /* Ajusta el margen inferior de este contenedor */
+}
+
+.mision-vision {
+  margin-top: -50; /* Elimina o reduce el margen superior de MisionVision */
+}
+
+/* Asegúrate de que el componente MisionVision no tenga margen extra */
+.mision-vision .container {
+  margin-top: -50; /* Si el contenedor de MisionVision tiene un margen superior, ajústalo */
+}
+
 
 .text-overlay {
   position: absolute;
@@ -43,18 +88,6 @@
   grid-template-rows: auto auto; /* Define dos filas para "SOBRE" y "NOSOTROS" */
 }
 
-.text-overlay .sobre,
-.text-overlay .nosotros {
-  display: block;
-  margin-bottom: 5px;
-}
-.sobre {
-  /* Estilos para "SOBRE" si es necesario */
-}
-
-.nosotros {
-  margin-top: 10px; /* Ajusta el espacio entre "SOBRE" y "NOSOTROS" */
-}
 
 
 /* Animación de la imagen (zoom y desplazamiento) */
@@ -158,17 +191,21 @@
 
 
 .btn-contacto {
-  background-color: rgb(240, 163, 21);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #007BFF; /* Azul que combina bien con el naranja */
+  color: white; /* Texto blanco */
+  font-size: 1.2rem; /* Tamaño de texto adecuado */
+  padding: 12px 24px; /* Espaciado del botón */
+  border: none; /* Sin bordes */
+  border-radius: 8px; /* Bordes redondeados */
+  display: block; /* Hace que el botón se comporte como un bloque */
+  margin: 20px auto; /* Centra el botón con un espacio arriba y abajo */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: all 0.3s ease; /* Transición suave al hacer hover */
 }
 
 .btn-contacto:active {
   transform: scale(0.95);
-  background-color: rgb(63, 200, 61);
+  background-color: (255, 165, 0, 0.9);
 }
 
 .btn-contacto:hover {
