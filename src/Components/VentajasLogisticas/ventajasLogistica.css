@@ -1,0 +1,55 @@
+.container-ventajas-logistica {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-ventajas-logistica {
+    margin: 45px 0 40px 0;
+}
+
+.content-ventajas-logistica {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    justify-content: space-around;
+    height: fit-content;
+}
+
+.ventajas-logistica-img {
+    display: flex;
+    flex-direction: row;
+}
+
+.ventajas-logistica-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    height: max-content;
+    position: relative;
+
+}
+
+.ventajas-logistica-img{
+    max-height: 200px;
+    min-width: 95px;
+    border-radius: 10px;
+}
+
+.ventajas-logistica-img-title {
+    margin-top: 16px;
+    font-size: 1.05em;
+    font-style: italic;
+    text-align: center;
+}
+
+.ventajas-logistica-description {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 2%;
+    flex-grow: 1;
+}
