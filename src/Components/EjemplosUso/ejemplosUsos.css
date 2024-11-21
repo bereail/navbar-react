@@ -42,3 +42,9 @@
 .card-usos-description {
     color: black;
 }
+
+.card-usos-img{
+    object-fit: cover;
+    height: 80%;
+    width: 80%;
+}

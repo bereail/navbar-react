@@ -56,7 +56,8 @@ const EjemplosUso = () => {
           <p className='card-usos-description'>{currentExample.description}</p>
         </div> 
         <img
-          src={currentExample.image}
+          className='card-usos-img'
+          src={currentExample.image} 
           alt={currentExample.title}
         />
       </div>
