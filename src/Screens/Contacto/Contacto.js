@@ -13,7 +13,7 @@ const Contacto = () => {
   return (
     <section className='section-contacto' id="contacto">
       <div className='container-contacto '>
-        <h1 className='title-contacto'>Contáctanos</h1>
+        <h1 className='title-contacto texto-parpadeante'>CONTÁCTANOS</h1>
         <div className='datos-contacto'>
           <p><strong>Dirección:</strong> Calle Ficticia 123, Ciudad, País</p>
           <p><strong>Teléfono:</strong> +123 456 7890</p>

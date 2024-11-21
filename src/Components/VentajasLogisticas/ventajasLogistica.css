@@ -1,55 +1,71 @@
 .container-ventajas-logistica {
     text-align: center;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    height: 100vh;
 }
 
 .title-ventajas-logistica {
-    margin: 45px 0 40px 0;
+    margin: 20px 0 40px 0;
+    font-weight: 700 !important;
 }
 
 .content-ventajas-logistica {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     max-width: 90%;
-    justify-content: space-around;
-    height: fit-content;
+    gap: 40px;
+    /* Espacio entre columnas */
+    flex-wrap: wrap;
+    /* Ajusta el contenido en pantallas pequeñas */
 }
 
 .ventajas-logistica-img {
     display: flex;
     flex-direction: row;
+    max-width: 40%;
+    /* Limita el ancho de las imágenes */
+    align-items: center;
+    gap: 20px;
 }
 
 .ventajas-logistica-image-wrapper {
     display: flex;
     flex-direction: column;
-    margin: 2%;
-    height: max-content;
-    position: relative;
-
+    align-items: center;
+    max-width: 200px;
 }
 
-.ventajas-logistica-img{
-    max-height: 200px;
-    min-width: 95px;
+.ventajas-logistica-img {
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .ventajas-logistica-img-title {
-    margin-top: 16px;
-    font-size: 1.05em;
+    margin-top: 8px;
+    font-size: 1em;
     font-style: italic;
     text-align: center;
 }
 
 .ventajas-logistica-description {
-    display: flex;
-    flex-direction: column;
+    flex: 1;
     text-align: justify;
-    gap: 2%;
-    flex-grow: 1;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.ultrabin-title-color {
+    color: rgb(255, 165, 0);
+}
+
+.octobin-title-color {
+    color: rgba(0, 89, 255, 0.9);
 }

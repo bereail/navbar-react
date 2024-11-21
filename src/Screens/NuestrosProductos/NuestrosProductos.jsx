@@ -60,7 +60,7 @@ const PRODUCTOS = [
 const NuestrosProductos = () => {
   return (
     <section className='section-productos'>
-      <h2 className='section-productos-title'>Nuestros Productos</h2>
+      <h2 className='section-productos-title'>NUESTROS PRODUCTOS</h2>
       <Productos productos={PRODUCTOS} />
       <EjemplosUso />
       <VentajasLogistica />

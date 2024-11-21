@@ -8,21 +8,21 @@ const examples = [
     {
       id: 1,
       image: Granulados,
-      title: "Sólido",
+      title: "SÓLIDO",
       description: "Uso ideal para productos sólidos como cereales o granos.",
       color: 'color-solido'
     },
     {
       id: 2,
       image: Liquidos,
-      title: "Líquido",
+      title: "LÍQUIDO",
       description: "Diseñado para almacenar líquidos de forma segura y eficiente.",
       colorClass: 'color-liquido'
     },
     {
       id: 3,
       image: Congelados,
-      title: "Congelado",
+      title: "CONGELADO",
       description: "Perfecto para productos congelados que necesitan bajas temperaturas.",
       colorClass: 'color-congelado'
     },
@@ -46,13 +46,13 @@ const EjemplosUso = () => {
   return (
     <div className='container-usos'>
       <h1 className='container-usos-title' >
-        Ejemplos de uso
+        EJEMPLOS DE USO
       </h1>
 
       <div className={`card-usos ${currentExample.colorClass}`}>
        
         <div>
-          <h4 className={`${currentExample.colorClass}`}>{currentExample.title}</h4>
+          <h4 className={`card-usos-title ${currentExample.colorClass}`}>{currentExample.title}</h4>
           <p className='card-usos-description'>{currentExample.description}</p>
         </div> 
         <img

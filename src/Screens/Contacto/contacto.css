@@ -16,7 +16,23 @@
 .title-contacto {
     align-self: flex-start;
     margin-bottom: 36px;
+    font-weight: bold !important;
+    color:  rgba(0, 89, 255, 0.9);
 }
+
+.texto-parpadeante {
+    animation: parpadeo 1s infinite; 
+}
+
+@keyframes parpadeo {
+    0%, 100% {
+        opacity: 1; /* Visible */
+    }
+    50% {
+        opacity: 0.6; /* Invisible */
+    }
+}
+
 
 .datos-contacto {
     display: flex;
