@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh; /* Cambiado a min-height para mejor adaptación */
     background-image: url('../../assets/inicioImg.png');
     background-size: cover;
     background-position: center;
@@ -11,13 +11,13 @@
     color: white;
     text-align: center;
     padding: 0 20px;
+    animation: zoomInBackground 10s infinite alternate;  /* Añadir animación */
 }
-
 
 .inicioContent h1 {
     font-size: 3rem;
     color: white;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Sombra más intensa */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,9 +33,8 @@
     margin-top: 0.5em;
     color: rgba(255, 255, 255, 0.85);
     font-size: 1.2rem;
-    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.7); /* Sombra para mejorar legibilidad */
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.7);
 }
-
 
 .inicioContent {
     z-index: 2;
@@ -51,9 +50,11 @@
 /* Contenedor flexible para los botones */
 .inicioButtonsContainer {
     display: flex;
-    gap: 20px; /* Espacio entre los botones */
+    gap: 20px;
     justify-content: center;
     align-items: center;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.7);
+    flex-wrap: wrap; /* Permite que los botones se ajusten en pantallas pequeñas */
 }
 
 .inicioButtonNaranja {
@@ -69,8 +70,8 @@
 }
 
 .inicioButtonNaranja:hover {
-    background-color: rgba(255, 140, 0, 1); /* Naranja más fuerte */
-    transform: scale(1.1); /* Efecto de agrandado al pasar el ratón */
+    background-color: rgba(255, 140, 0, 1);
+    transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -98,4 +99,53 @@
 
 .inicioButtonVerde:active {
     transform: scale(1);
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .inicioContent h1 {
+        font-size: 2.5rem;
+    }
+
+    .inicioParagraph {
+        font-size: 1.1rem;
+    }
+
+    .inicioButtonNaranja, .inicioButtonVerde {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    .inicioButtonsContainer {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .inicioContent h1 {
+        font-size: 2rem;
+    }
+
+    .inicioParagraph {
+        font-size: 1rem;
+    }
+
+    .inicioButtonNaranja, .inicioButtonVerde {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .inicioButtonsContainer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@keyframes zoomInBackground {
+    0% {
+        transform: scale(1);  /* Estado inicial sin zoom */
+    }
+    100% {
+        transform: scale(1.05);  /* Zoom sutil */
+    }
 }
