@@ -15,7 +15,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <Router>
-      <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+      <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" , alignContent: "center"}}>
         <Navbar />
         <main style={{ flex: 1 }}>
           <Routes>

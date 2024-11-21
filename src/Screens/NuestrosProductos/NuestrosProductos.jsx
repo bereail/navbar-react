@@ -5,9 +5,10 @@ import Ultrabin500 from '../../assets/35.png';
 import Ultrabin1000 from '../../assets/octobin2.png';
 import { faLayerGroup, faWeightHanging, faBoxesStacked } from '@fortawesome/free-solid-svg-icons';
 import EjemplosUso from '../../Components/EjemplosUso/EjemplosUso';
-import VentajasLogisticas from './VentajasLogisticas/VentajasLogisticas';
 import Productos from '../../Components/Productos/Productos';
+import VentajasLogistica from '../../Components/VentajasLogisticas/VentajasLogistica';
 import './nuestrosProductos.css'
+
 
 const PRODUCTOS = [
   {
@@ -62,7 +63,7 @@ const NuestrosProductos = () => {
       <h2 className='section-productos-title'>Nuestros Productos</h2>
       <Productos productos={PRODUCTOS} />
       <EjemplosUso />
-      <VentajasLogisticas />
+      <VentajasLogistica />
     </section>
   );
 };

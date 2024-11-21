@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Item from './Item/Item'
 import './productos.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,9 +6,9 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import FormularioContacto from '../FormularioContacto/FormularioContacto';
 
 const Productos = ({ productos }) => {
-
-    const [visibleProducts, setVisibleProducts] = useState(productos.slice(0, 3)); // Empieza con los primeros 3 productos
+    const [visibleProducts, setVisibleProducts] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
 
     const handleModalToggle = () => setIsModalOpen(!isModalOpen);
 
@@ -16,8 +16,13 @@ const Productos = ({ productos }) => {
         e.preventDefault();
         setVisibleProducts(prevState => {
             const newProducts = [...prevState];
-            newProducts.unshift(productos[(productos.indexOf(prevState[0]) - 1 + productos.length) % productos.length]);
-            newProducts.pop();
+            if (isSmallScreen) {
+                newProducts.unshift(productos[(productos.indexOf(prevState[0]) - 1 + productos.length) % productos.length]);
+                newProducts.pop();
+            } else {
+                newProducts.unshift(productos[(productos.indexOf(prevState[0]) - 1 + productos.length) % productos.length]);
+                newProducts.pop();
+            }
             return newProducts;
         });
     };
@@ -26,11 +31,37 @@ const Productos = ({ productos }) => {
         e.preventDefault();
         setVisibleProducts(prevState => {
             const newProducts = [...prevState];
-            newProducts.push(productos[(productos.indexOf(prevState[2]) + 1) % productos.length]);
-            newProducts.shift();
+            if (isSmallScreen) {
+                newProducts.push(productos[(productos.indexOf(prevState[0]) + 1) % productos.length]);
+                newProducts.shift();
+            } else {
+                newProducts.push(productos[(productos.indexOf(prevState[2]) + 1) % productos.length]);
+                newProducts.shift();
+            }
             return newProducts;
         });
     };
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth < 768);
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (isSmallScreen) {
+            setVisibleProducts(productos.slice(0, 1));
+        } else {
+            setVisibleProducts(productos.slice(0, 3));
+        }
+    }, [productos, isSmallScreen]);
 
     return (
         <div className='productos-container'>
@@ -38,20 +69,17 @@ const Productos = ({ productos }) => {
                 <FontAwesomeIcon icon={faChevronLeft} />
             </div>
 
-
             {visibleProducts.map((producto) => (
-                <Item producto={producto} key={producto.id} handleModalToggle={handleModalToggle}/>
+                <Item producto={producto} key={producto.id} handleModalToggle={handleModalToggle} />
             ))}
 
-            <div onClick={moveRight} className='arrow-right' >
+            <div onClick={moveRight} className='arrow-right'>
                 <FontAwesomeIcon icon={faChevronRight} />
             </div>
 
-            {isModalOpen && (<FormularioContacto handleModalToggle={handleModalToggle}/>)}
-
+            {isModalOpen && (<FormularioContacto handleModalToggle={handleModalToggle} />)}
         </div>
     );
 }
 
 export default Productos;
-

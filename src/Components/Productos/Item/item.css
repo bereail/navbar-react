@@ -1,3 +1,4 @@
+/* Contenedor principal */
 .card-container {
     perspective: 1000px;
     width: 300px;
@@ -6,8 +7,8 @@
 }
 
 .card {
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.6s ease;
@@ -18,16 +19,7 @@
     transform: rotateY(180deg);
 }
 
-.card-front,
-.card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
+/* Frente de la tarjeta */
 .card-front {
     background-color: #ffffff;
     display: flex;
@@ -35,21 +27,16 @@
     align-items: center;
     justify-content: center;
     padding: 0 16px 12px 16px;
-}
-
-.card-back {
-    background-color: #ffa60009;
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    padding: 16px 16px 12px 16px;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .img-container {
-    height: 150px; 
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,32 +49,95 @@
     height: 100%;
 }
 
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin: 20px 0 16px 0;
+}
+
+.card-description {
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 100px;
+}
+
+/* Reverso de la tarjeta */
+.card-back {
+    background-color: #ffa60009;
+    transform: rotateY(180deg);
+    color: black;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 2%;
+    height: 100%;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.card-title-back {
+    font-size: clamp(1.2rem, 2vw, 1.5rem); /* Ajusta entre 1rem y 1.5rem dependiendo del ancho */
+    text-align: center;
+    margin: 0 0 2% 0;
+}
+
 .item-features-container {
     margin: 0;
     padding: 0;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: 2%;
+    max-height: 60%; 
+    box-sizing: border-box;
 }
 
 .item-features {
     list-style-type: none;
-    padding: 0 4px 0 4px;
+    padding: 0 4px;
     text-align: left;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: clamp(0.9rem, 1.5vw, 1rem); /* Ajusta entre 0.8rem y 1rem dinámicamente */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .item-feature-icon {
-    max-width: 3em;
+    max-width: 2em;
     height: auto;
     max-height: 2.2em;
     color: #ffa500;
     margin-right: 0.8em;
 }
 
+
+/* Botón */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* Asegura que esté al final */
+}
+
 .btn-cotizar,
 .btn-cotizar:active {
-    background-color:  rgba(255, 165, 0, 0.9);
-    margin: 16px 0;
+    background-color: rgba(255, 165, 0, 0.9);
     padding: 4px 16px;
     border-radius: 8px;
     color: white;
@@ -111,31 +161,6 @@
 
 .btn-cotizar:active {
     transform: scale(0.95);
-}
-
-
-.card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px; 
-    margin: 20px 0 16px 0;
-}
-
-.card-title-back {
-    font-size: 20px;
-    margin: 0 0 16px 0;
-}
-
-.card-description {
-    font-size: 1rem;
-    text-align: center;
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    height: 100px; 
 }
 
 

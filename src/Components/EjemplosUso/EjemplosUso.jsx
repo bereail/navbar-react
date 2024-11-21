@@ -2,33 +2,34 @@ import React, { useState, useEffect } from 'react';
 import Granulados from '../../assets/Granulados.png';
 import Liquidos from '../../assets/Liquidos.png';
 import Congelados from '../../assets/Congelados.png';
-import styles from './EjemplosUso.module.css';
+import './ejemplosUsos.css'
 
-
-const EjemplosUso = () => {
-  const examples = [
+const examples = [
     {
       id: 1,
       image: Granulados,
       title: "Sólido",
       description: "Uso ideal para productos sólidos como cereales o granos.",
-      colorClass: styles.solidColor, // Color asociado a "Sólido"
+      color: 'color-solido'
     },
     {
       id: 2,
       image: Liquidos,
       title: "Líquido",
       description: "Diseñado para almacenar líquidos de forma segura y eficiente.",
-      colorClass: styles.liquidColor, // Color asociado a "Líquido"
+      colorClass: 'color-liquido'
     },
     {
       id: 3,
       image: Congelados,
       title: "Congelado",
       description: "Perfecto para productos congelados que necesitan bajas temperaturas.",
-      colorClass: styles.frozenColor, // Color asociado a "Congelado"
+      colorClass: 'color-congelado'
     },
   ];
+
+const EjemplosUso = () => {
+  
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -43,20 +44,21 @@ const EjemplosUso = () => {
   const currentExample = examples[currentIndex];
 
   return (
-    <div className={styles.container}>
-      <h1 className={`${styles.title}`}>
+    <div className='container-usos'>
+      <h1 className='container-usos-title' >
         Ejemplos de uso
       </h1>
 
-      <div className={styles.containerUsos}>
+      <div className={`card-usos ${currentExample.colorClass}`}>
+       
+        <div>
+          <h4 className={`${currentExample.colorClass}`}>{currentExample.title}</h4>
+          <p className='card-usos-description'>{currentExample.description}</p>
+        </div> 
         <img
           src={currentExample.image}
           alt={currentExample.title}
         />
-        <div>
-          <h4>{currentExample.title}</h4>
-          <p>{currentExample.description}</p>
-        </div>
       </div>
 
     </div>

@@ -1,0 +1,44 @@
+.container-usos {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container-usos-title {
+    margin: 45px 0 40px 0;
+}
+
+.card-usos {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 24px 36px;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 70%
+}
+
+.color-liquido {
+    color: lightseagreen;
+}
+
+.color-granulado {
+    color: black;
+}
+
+.color-congelado {
+    color: lightskyblue;
+}
+
+.card-usos-description {
+    color: black;
+}
