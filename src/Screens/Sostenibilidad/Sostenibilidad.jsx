@@ -25,10 +25,9 @@ const Sostenibilidad = () => {
   return (
     <section className={styles.section} id="Sostenibilidad">
       <div className={styles.containerSostenibilidad}>
-            <h1 className={styles.titleSostenibilidad}>SOSTENIBILIDAD</h1>
-            <p className={styles.descripcion}> 
-          <strong>ULTRACOR</strong>  Diseña productos que equilibran las necesidades del cliente y el cuidado del medio ambiente.
-             </p>
+            <h1 className={styles.titleSostenibilidad}
+            >SOSTENIBILIDAD</h1>
+
           <EcoCards />
           <BeneficiosEcologicos />
         </div>

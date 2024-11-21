@@ -1,33 +1,40 @@
 .section {
+  min-height: 110vh; /* Ocupar más del 100% de la altura de la ventana */
   display: flex;
+  height: auto;
+  /*padding: 80px 40px;*/
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px; /* Ajusta el espacio entre secciones */
-  padding: 20px;
-  background-image: url('../../assets//Sostenibilidad.png');
-  background-size: cover; /* Ajusta para que la imagen ocupe todo el contenedor */
-  background-position: center;
-  background-color: rgba(255, 255, 255, 0.5); /* Blanco semitransparente */
-  background-blend-mode: overlay; /* Mezcla el color con la imagen */
+  gap: 20px; /* Espacio entre los elementos */
+  padding: 40px; /* Incrementa el espacio interno */
+  height: 100vh; /* Asegura que la sección ocupe toda la altura de la ventana */
+  background-image: url('../../assets/Hojas.png'); /* Ruta de la imagen */
+  background-size: cover; /* Ajusta la imagen para que ocupe toda el área */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-
+  background-color: rgba(255, 255, 255, 0.349); /* Blanco semitransparente */
+  background-blend-mode: overlay; /* Mezcla el color con la imagen */
 }
+
 
 .titleSostenibilidad 
 {
-  font-size: 4rem; /* Tamaño del título */
-  color: #2e7d32; /* Verde oscuro para sostenibilidad */
-  margin-bottom: 20px; /* Espacio con los componentes siguientes */
+  font-size: 3.5rem; /* Tamaño del título */
+  color: #00ba49; /* Verde oscuro para sostenibilidad */
+  margin-bottom: 10px; /* Espacio con los componentes siguientes */
   font-weight: bold;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
-  margin: 0;
+  margin-top: -50px; /* Mueve el título hacia arriba */
+  margin-bottom: 10px; /* Espacio con los componentes siguientes */
 
 }
 
 .descripcion {
   text-align: center;
   font-size: 1.5rem;
+  color: #2d2920;
 }
 
