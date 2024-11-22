@@ -7,7 +7,7 @@ const BeneficiosEcologicos = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true); // Activa la animación cuando el componente se monta
+    setIsLoaded(true); // Activar la animación cuando el componente se monta
   }, []);
 
   return (

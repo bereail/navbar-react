@@ -9,6 +9,11 @@
   text-align: center;
 }
 
+
+.p{
+  font-size:  2rem;
+}
+
 .banner-nosotros {
   width: 100%;
   position: relative;
@@ -165,10 +170,10 @@
 
 .card-descripcion-empresa {
   margin: 0 auto 20px; /* Centramos la tarjeta horizontalmente */
-  padding: 30px  5px; /* Reducimos el padding para que la tarjeta quede más ajustada */
+  padding: 20px  5px; /* Reducimos el padding para que la tarjeta quede más ajustada */
   border-radius: 8px; /* Menos redondeo en las esquinas */
   opacity: 0;
-  font-size:  5rem;
+  font-size:  1.2rem;
   transform: translateY(20px);
   animation-duration: 1s;
   animation-timing-function: ease-out;
