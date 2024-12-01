@@ -7,17 +7,13 @@ const BeneficiosEcologicos = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true); // Activa la animación cuando el componente se monta
+    setIsLoaded(true); // Activar la animación cuando el componente se monta
   }, []);
 
   return (
     <div className={`${styles.largeCard} ${isLoaded ? styles.loaded : ''}`}>
       <div>
         <h2 className={styles.titleh2}>Beneficios Ecológicos</h2>
-        <p className={styles.description}>
-          <FontAwesomeIcon icon={faLightbulb} className={styles.detailIcon} />{' '}
-          <strong>ULTRACOR:</strong> Diseña productos que equilibran las necesidades del cliente y el cuidado del medio ambiente.
-        </p>
         <p className={styles.description}>
           <FontAwesomeIcon icon={faLeaf} className={styles.detailIcon} />{' '}
           <strong>ULTRACOR:</strong> Diseña productos que equilibran las necesidades del cliente y el cuidado del medio ambiente.

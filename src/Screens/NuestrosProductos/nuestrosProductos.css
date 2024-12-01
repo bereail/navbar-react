@@ -1,6 +1,6 @@
 .section-productos {
     padding: 80px 20px;
-    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, #FFFFFF 10%, #A8E6A3 90%);
     text-align: center;
     min-height: 300vh;
     display: flex;
@@ -11,6 +11,7 @@
 
 .section-productos-title {
     color:  rgba(0, 89, 255, 0.9);
+    font-style: bold;
     font-size: 3em;
     margin-top: 12px;
     margin-bottom: 24px;
