@@ -1,35 +1,50 @@
 body {
-    font-family: 'Helvetica', Arial, sans-serif;
-  }
-  
-  .titleh2{
-    text-align: center;
+  font-family: 'Helvetica', Arial, sans-serif;
 }
 
-.description{
-    text-align: center
-};
+.titleh2 {
+  text-align: center;
+}
+
+.description {
+  text-align: center
+}
+
+;
 
 /* Estilo para la tarjeta con animación */
 .largeCard {
-    margin-top: 90px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+  margin-top: 90px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Agrega una clase cuando la tarjeta se carga o aparece */
+.largeCard.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Usando un pequeño retraso para que la animación se vea cuando se cargue */
+.titleh2 {
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .largeCard {
+    padding: 0 15px; /* Agregar padding en los costados */
   }
-  
-  /* Agrega una clase cuando la tarjeta se carga o aparece */
-  .largeCard.loaded {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Usando un pequeño retraso para que la animación se vea cuando se cargue */
+
   .titleh2 {
     text-align: center;
   }
-  
+
   .description {
     text-align: center;
   }
-  
+}

@@ -20,16 +20,13 @@
     align-items: flex-start;
     max-width: 90%;
     gap: 40px;
-    /* Espacio entre columnas */
     flex-wrap: wrap;
-    /* Ajusta el contenido en pantallas pequeñas */
 }
 
 .ventajas-logistica-img {
     display: flex;
     flex-direction: row;
     max-width: 40%;
-    /* Limita el ancho de las imágenes */
     align-items: center;
     gap: 20px;
 }
