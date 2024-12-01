@@ -3,6 +3,7 @@ import cajonEspecial from '../../assets/cajonEspecial.png';
 import Ultrabox1200 from '../../assets/contenedorEstandarUltraboxA1200.png';
 import Ultrabin500 from '../../assets/35.png';
 import Ultrabin1000 from '../../assets/octobin2.png';
+import producto from '../../assets/product.png';
 import { faLayerGroup, faWeightHanging, faBoxesStacked } from '@fortawesome/free-solid-svg-icons';
 import EjemplosUso from '../../Components/EjemplosUso/EjemplosUso';
 import Productos from '../../Components/Productos/Productos';
@@ -49,6 +50,17 @@ const PRODUCTOS = [
     title: 'Ultrabin 500',
     description: 'Diseño octogonal para optimizar espacio',
     img: Ultrabin500,
+    features: [
+      { icon: faLayerGroup, description: 'Construcción resistente' },
+      { icon: faWeightHanging, description: 'Soporta hasta 500 kg' },
+      { icon: faBoxesStacked, description: 'Mejor aprovechamiento del espacio en el transporte' },
+    ],
+  },
+    {
+    id: 5,
+    title: 'TITULO',
+    description: 'Descripcion',
+    img: producto,
     features: [
       { icon: faLayerGroup, description: 'Construcción resistente' },
       { icon: faWeightHanging, description: 'Soporta hasta 500 kg' },

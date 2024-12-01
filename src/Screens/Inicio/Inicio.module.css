@@ -14,6 +14,17 @@
     animation: zoomInBackground 10s infinite alternate;  /* Añadir animación */
 }
 
+/* Estilos del overlay (capa de superposición) */
+.inicioOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente */
+    z-index: 1; /* Asegura que el overlay esté debajo del contenido */
+}
+
 .inicioContent h1 {
     font-size: 3rem;
     color: white;
@@ -30,11 +41,21 @@
 }
 
 .inicioParagraph {
-    margin-top: 0.5em;
+    margin-top: 0; /* Eliminar margen superior */
+    margin-bottom: 0.5em; /* Mantener el margen inferior si lo deseas */
     color: rgba(255, 255, 255, 0.85);
     font-size: 1.2rem;
     text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.7);
 }
+
+.inicioParagraphExplora {
+    margin-top: 0; /* Eliminar margen superior */
+    margin-bottom: 0; /* Eliminar margen inferior */
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.2rem;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.7);
+}
+
 
 .inicioContent {
     z-index: 2;

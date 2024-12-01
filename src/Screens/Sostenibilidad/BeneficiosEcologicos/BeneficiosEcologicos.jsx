@@ -15,10 +15,6 @@ const BeneficiosEcologicos = () => {
       <div>
         <h2 className={styles.titleh2}>Beneficios Ecológicos</h2>
         <p className={styles.description}>
-          <FontAwesomeIcon icon={faLightbulb} className={styles.detailIcon} />{' '}
-          <strong>ULTRACOR:</strong> Diseña productos que equilibran las necesidades del cliente y el cuidado del medio ambiente.
-        </p>
-        <p className={styles.description}>
           <FontAwesomeIcon icon={faLeaf} className={styles.detailIcon} />{' '}
           <strong>ULTRACOR:</strong> Diseña productos que equilibran las necesidades del cliente y el cuidado del medio ambiente.
         </p>
