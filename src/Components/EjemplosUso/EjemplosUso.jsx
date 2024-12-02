@@ -46,7 +46,7 @@ const EjemplosUso = () => {
   return (
     <div className='container-usos'>
       <h1 className='container-usos-title' >
-        EJEMPLOS DE USO
+        EJEMPLOS DE USO OCTOBIN 1000
       </h1>
 
       <div className={`card-usos ${currentExample.colorClass}`}>
