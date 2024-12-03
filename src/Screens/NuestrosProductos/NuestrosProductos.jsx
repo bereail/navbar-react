@@ -2,12 +2,12 @@ import React from 'react';
 import cajonEspecial from '../../assets/cajonEspecial.png';
 import Ultrabox1200 from '../../assets/contenedorEstandarUltraboxA1200.png';
 import Ultrabin500 from '../../assets/35.png';
-import Ultrabin1000 from '../../assets/octobin2.png';
+import Octobin1000 from '../../assets/octobin2.png';
 import producto from '../../assets/product.png';
 import { faLayerGroup, faWeightHanging, faBoxesStacked } from '@fortawesome/free-solid-svg-icons';
 import EjemplosUso from '../../Components/EjemplosUso/EjemplosUso';
 import Productos from '../../Components/Productos/Productos';
-
+import Ultrabin1000 from '../Ultrabin1000/Ultrabin1000';
 import './nuestrosProductos.css'
 import VentajasLogistica from '../../Components/VentajasLogisticas/VentajasLogistica';
 
@@ -17,7 +17,7 @@ const PRODUCTOS = [
     id: 1,
     title: 'Ultrabin 1000',
     description: 'Solución innovadora para almacenamiento',
-    img: Ultrabin1000,
+    img: Octobin1000,
     features: [
       { icon: faLayerGroup, description: 'Construido a partir de dos capas de cartón corrugado reforzado' },
       { icon: faWeightHanging, description: 'Resiste cargas pesadas de hasta 1000 kg' },
@@ -75,8 +75,7 @@ const NuestrosProductos = () => {
     <section className='section-productos'>
       <h2 className='section-productos-title'>NUESTROS PRODUCTOS</h2>
       <Productos productos={PRODUCTOS} />
-      <EjemplosUso />
-<VentajasLogistica/>
+      <Ultrabin1000 />
     </section>
   );
 };
