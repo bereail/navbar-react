@@ -6,6 +6,7 @@ const Ultrabin1000Product = () => {
   return (
     <div className={styles.productContainer}>
       {/* Usar la imagen importada directamente */}
+      <h1>OCTOBIN 1000</h1>
       <img src={Ultrabin1000} alt="Imagen del Ultrabin 1000" className={styles.productImage} />
     </div>
   );
