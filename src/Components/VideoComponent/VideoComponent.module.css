@@ -1,0 +1,16 @@
+.card {
+    border: 2px solid #0D6D95; 
+    border-radius: 10px;   /* Bordes redondeados */
+    padding: 16px;         /* Espaciado interno */
+    background-color: #f9f9f9; /* Color de fondo claro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-top: 60px;      /* Aumenta el margen superior (ajusta según lo necesario) */
+    max-width: 600px;      /* Ancho máximo de la tarjeta */
+    text-align: center;    /* Centrar el contenido */
+}
+
+.video {
+    max-width: 100%;       /* Ajustar ancho máximo al contenedor */
+    height: auto;          /* Mantener proporción */
+    border-radius: 8px;    /* Bordes redondeados para el video */
+}

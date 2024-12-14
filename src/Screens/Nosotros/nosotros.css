@@ -1,4 +1,5 @@
 .container-nosotros {
+  background-image: url('../../assets/Back.png'); 
   position: relative;
   min-height: 210vh;
   display: flex;
@@ -12,6 +13,10 @@
 
 .p{
   font-size:  2rem;
+}
+
+.title-nosotros {
+  color: #238973 !important;
 }
 
 .banner-nosotros {
@@ -48,14 +53,14 @@
 }
 .sobre {
   font-weight: bold;
-  color: white;
+  color: #0D6D95;
   display: block; /* Asegura que el texto "Sobre" sea un bloque, apilando el siguiente texto debajo */
   margin-bottom: 5px; /* Añade un pequeño espacio entre "Sobre" y "Nosotros" */
 }
 
 .nosotros {
   font-weight: bold;
-  color: white;
+  color: #0D6D95;
   display: block; /* Asegura que "Nosotros" también sea un bloque */
   margin-top: 0; /* No es necesario añadir espacio adicional si ya tienes el margin-bottom en "Sobre" */
 }
@@ -75,6 +80,9 @@
   margin-top: -50; /* Si el contenedor de MisionVision tiene un margen superior, ajústalo */
 }
 
+.descripcion-empresa {
+  color: #0D6D95;
+}
 
 .text-overlay {
   position: absolute;

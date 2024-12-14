@@ -5,8 +5,6 @@ import NosotrosEmpresa from '../../assets/NosotrosEmpresa.png';
 import './nosotros.css';
 import useObserver from '../../Hooks/useObserver';
 import MisionVision from './MisionVision/MisionVision';
-import NuestrosProductos from '../NuestrosProductos/NuestrosProductos';
-import Ultrabin1000 from '../Ultrabin1000/Ultrabin1000';
 
 
 function Nosotros() {

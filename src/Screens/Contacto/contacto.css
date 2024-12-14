@@ -1,5 +1,5 @@
 .section-contacto {
-    background-color: rgba(168, 230, 163, 0.3);
+    background-image: url('../../assets/Back.png'); 
     padding: 80px 20px;
     min-height: 100vh;
     display: flex;
@@ -43,30 +43,25 @@
 
 .buttons-contacto button {
     margin: 16px 0;
-    padding: 4px 16px;
-    border-radius: 8px;
-    color: white;
+    padding: 12px 24px; /* Aumenta el tamaño del padding */
+    font-size: 1.2em; /* Aumenta el tamaño del texto */
+    border-radius: 12px; /* Agranda los bordes redondeados */
+    color: #0D6D95;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+
 .btn-contactar,
 .btn-contactar:active {
-    background-color: rgb(63, 200, 61, 0.9);
+    background-color: #D2E965;
 }
 
 .btn-contactar:hover {
-    background-color: rgb(63, 200, 61, 1);
+    background-color: #0D6D95;
 }
 
-.btn-cotizar,
-.btn-cotizar:active {
-    background-color:  rgba(255, 165, 0, 0.9);
-}
 
-.btn-cotizar:hover {
-    background-color: rgba(255, 166, 0, 1);
-}
 
 .btn-contactar:hover,
 .btn-cotizar:hover {

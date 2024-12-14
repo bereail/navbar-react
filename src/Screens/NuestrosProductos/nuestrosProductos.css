@@ -1,6 +1,5 @@
 .section-productos {
-    padding: 80px 20px;
-    background: linear-gradient(to bottom, #FFFFFF 10%, #A8E6A3 90%);
+    background-image: url('../../assets/Back.png'); 
     text-align: center;
     min-height: 300vh;
     display: flex;

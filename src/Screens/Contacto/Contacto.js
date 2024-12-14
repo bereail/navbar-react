@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
-import styles from './Contacto.module.css';
+
 import './contacto.css'
 import FormularioContacto from '../../Components/FormularioContacto/FormularioContacto';
 
@@ -25,10 +24,6 @@ const Contacto = () => {
         <button className="btn btn-contactar" onClick={handleModalToggle}>
           Quiero que me contacten
         </button>
-        <button className="btn-contacto" onClick={() => document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' })}>
-  Contáctenos
-</button>
-
       </div>
 
       {isModalOpen && (<FormularioContacto handleModalToggle={handleModalToggle}/>)}

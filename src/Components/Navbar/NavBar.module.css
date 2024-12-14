@@ -32,8 +32,8 @@
 
 /* Fondo sólido */
 .solid {
-  background: linear-gradient(to right, rgba(255, 140, 0, 0.9), rgba(255, 200, 0, 0.9));
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #0D6D95, #238973);
+  box-shadow: 0 4px 10px #00000033;
 }
 
 

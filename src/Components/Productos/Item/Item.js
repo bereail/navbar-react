@@ -27,7 +27,7 @@ const Item = ({ producto, handleModalToggle }) => {
             )}
           </ul>
           <div className='button-container'>
-          <button className="btn-cotizar" onClick={handleModalToggle}>Solicitar Cotización</button>
+          <button className="btn-informacion" onClick={handleModalToggle}>Más información</button>
           </div>
           
           
