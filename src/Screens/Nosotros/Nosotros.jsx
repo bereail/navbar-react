@@ -1,7 +1,7 @@
 // Nosotros.js
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NosotrosEmpresa from '../../assets/NosotrosEmpresa.png';
+import NosotrosEmpresa from '../../assets/fondo-nosotros.png';
 import './nosotros.css';
 import useObserver from '../../Hooks/useObserver';
 import MisionVision from './MisionVision/MisionVision';
@@ -23,7 +23,9 @@ function Nosotros() {
   return (
     <div className="container-nosotros">
       <div className="banner-nosotros">
+
         <img src={NosotrosEmpresa} alt="Banner Nosotros" className="banner-image" />
+       
         <h3 className="text-overlay">
           <span className="sobre">SOBRE</span>
           <span className="nosotros">NOSOTROS</span>

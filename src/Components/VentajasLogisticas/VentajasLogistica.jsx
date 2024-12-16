@@ -1,6 +1,4 @@
 import React from 'react';
-import Octobin from '../../assets/Octobin.png';
-import Tambor from '../../assets/Tambor.png';
 import './ventajasLogistica.css'
 
 const VentajasLogistica = () => {

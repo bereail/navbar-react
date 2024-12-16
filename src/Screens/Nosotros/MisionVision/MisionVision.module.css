@@ -4,6 +4,9 @@
   align-items: center;
   height: 100vh; /* Para que todo ocupe el alto completo de la pantalla */
   padding: 0 20px; /* Espaciado a los lados */
+  background-image: url('../../../assets/background.png'); 
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .contentFilosofiaContainer {
@@ -47,7 +50,7 @@
   margin-top: 10px; /* Espacio entre el título y la descripción */
 }
 
-img {
+.img {
   width: 40rem; /* Ajusta el tamaño del logo */
   height: auto;
   margin-bottom: 40px; /* Aumentamos el espacio entre el logo y las secciones */

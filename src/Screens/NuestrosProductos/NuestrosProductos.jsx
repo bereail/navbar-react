@@ -8,7 +8,6 @@ import Ultrabin200 from '../../assets/Ultra/Ultrabin200.png';
 import Ultrabulk1300 from '../../assets/Ultra/Ultrabulk1300.png';
 import { faLayerGroup, faWeightHanging, faBoxesStacked } from '@fortawesome/free-solid-svg-icons';
 import Productos from '../../Components/Productos/Productos';
-import Ultrabin1000 from '../Ultrabin1000/Ultrabin1000';
 import './nuestrosProductos.css'
 import VideoComponent from '../../Components/VideoComponent/VideoComponent';
 
@@ -98,9 +97,15 @@ const PRODUCTOS = [
 const NuestrosProductos = () => {
   return (
     <section className='section-productos'>
-      <h2 className='section-productos-title'>NUESTROS PRODUCTOS</h2>
-      <Productos productos={PRODUCTOS} />
-      <VideoComponent />
+      
+      <div className='productos'>
+        <h2 className='section-productos-title'>NUESTROS PRODUCTOS</h2>
+        <Productos productos={PRODUCTOS} />
+      </div>
+      <div className='video'>
+        <VideoComponent />
+      </div>
+
     </section>
   );
 };

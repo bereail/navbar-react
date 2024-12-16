@@ -9,7 +9,7 @@ const MisionVision = () => {
 
   return (
     <section className={styles.sectionFilosofiaContainer}>
-      <img src={logo} alt="Logo de la empresa" />
+      <img src={logo} alt="Logo de la empresa" className={styles.img} />
       <div className={styles.contentFilosofiaContainer}>
         {/* Misión */}
         <div

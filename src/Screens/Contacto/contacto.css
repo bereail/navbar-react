@@ -1,5 +1,10 @@
+#Contacto {
+    background-image: url('../../assets/background.png'); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 .section-contacto {
-    background-image: url('../../assets/Back.png'); 
     padding: 80px 20px;
     min-height: 100vh;
     display: flex;
