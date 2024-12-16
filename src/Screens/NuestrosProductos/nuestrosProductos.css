@@ -6,7 +6,7 @@
 
 .section-productos {
     text-align: center;
-    min-height: 250vh;
+    min-height: 150vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,7 @@
 }
 
 .productos{
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 100px 0px 0px 0px;
 }
 
@@ -22,7 +22,28 @@
 .section-productos-title {
     color:  rgba(0, 89, 255, 0.9);
     font-style: bold;
-    font-size: 3em;
+    font-size: 4.3em;
     margin-top: 42px;
     margin-bottom: 80px;
 }
+/* Estilos para el botón */
+.button-container {
+    text-align: center;
+    margin-top: 20px; /* Ajusta el margen según lo necesites */
+  }
+  
+  .btn-conoce-mas {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #0D6D95; /* Color del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-conoce-mas:hover {
+    background-color: #0b5577; /* Color de fondo al pasar el cursor */
+  }
+  

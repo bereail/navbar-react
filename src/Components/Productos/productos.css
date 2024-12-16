@@ -1,12 +1,14 @@
 .product-section{
     background-color: aqua;
 }
+
 .productos-container{
     display: flex;
     flex-direction: row;
     align-items: center;
     user-select: none;
     max-width: 100%;
+    
 }
 
 .arrow-left, .arrow-right{

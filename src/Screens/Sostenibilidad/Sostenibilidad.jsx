@@ -26,7 +26,7 @@ const Sostenibilidad = () => {
     <section className={styles.section} id="Sostenibilidad">
       <div className={styles.containerSostenibilidad}>
             <h1 className={styles.titleSostenibilidad}
-            >SOSTENIBILIDAD</h1>
+            >Sostenibilidad</h1>
 
           <EcoCards />
           <BeneficiosEcologicos />

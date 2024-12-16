@@ -1,16 +1,22 @@
 .card {
     border: 2px solid #0D6D95; 
+    margin-top: 20px;     /* Reducir el margen superior */
+    margin-bottom: 90px;
     border-radius: 10px;   
-    padding: 16px;         
+    padding: 5px;         
     background-color: #f9f9f9; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     margin-top: 100px;     
     max-width: 600px;      
-    text-align: center;    
+    text-align: center;   
+    margin-top: 65%;
 }
 
 .video {
-    max-width: 100%;      
+    margin-top: 0px;
+    margin-bottom: 0px;
+    max-width: 80%;    
     height: auto;        
     border-radius: 8px;    
+    width: 100%;
 }
