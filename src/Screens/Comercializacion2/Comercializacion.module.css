@@ -1,5 +1,5 @@
-.sectionComercializacion{
-    min-height: 100hv;
+.sectionComercializacion {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,50 +12,50 @@
     background-color: #e4f17f;
     border: 5px solid #2b6a89;
     border-radius: 10px;
-    margin: 30px 120px;
-    padding: 24px;
+    margin: 5vw 10vw;
+    padding: 2vw;
 }
 
 .title {
-    margin-top: 120px;
-    font-size: 3em;
+    margin-top: 5vh;
+    font-size: clamp(1.8rem, 5vw, 3rem); /* Nunca menos de 1.8rem, escala con 5vw, máximo 3rem */
     font-weight: bold;
-    color:#004aad;
+    color: #004aad;
     text-align: center;
 }
 
 .description {
-    font-size: 1.3em;;
+    font-size: clamp(1rem, 3vw, 1.5rem); /* Mínimo 1rem, escala con 3vw, máximo 1.5rem */
     color: #004aad;
-    margin: 10px 0;
+    margin: 1vh 0;
 }
 
 .opcionesList {
     list-style: none;
-    padding-left: 20px;
+    padding-left: 3vw;
 }
 
 .option {
-    font-size: 1.3em;
-    color:#004aad;
-    margin-bottom: 8px;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #004aad;
+    margin-bottom: 1vh;
 }
 
 .subList {
     list-style: none;
-    margin-left: 30px;
+    margin-left: 4vw;
     padding-left: 0;
 }
 
 .subOption {
-    font-size: 1.3em;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     color: #004aad;
-    margin-bottom: 5px;
+    margin-bottom: 1vh;
 }
 
 .descriptionItalic {
     font-style: italic;
     color: #004aad;
-    margin-top: 15px;
-    font-size: 1.2em;
+    margin-top: 2vh;
+    font-size: clamp(0.9rem, 1.8vw, 1.2rem);
 }

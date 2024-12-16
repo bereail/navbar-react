@@ -1,6 +1,6 @@
 import React from 'react';
-import useObserver from '../../../Hooks/useObserver';
-import logo from '../../../assets/logo.png';
+import useObserver from '../../Hooks/useObserver';
+import logo from '../../assets/logo.png'
 import styles from './MisionVision.module.css';
 
 const MisionVision = () => {

@@ -3,15 +3,21 @@ import Item from './Item/Item';
 import './productos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import FormularioContacto from '../FormularioContacto/FormularioContacto';
+import Card from './Card/Card';
 
 const Productos = ({ productos = [] }) => {
     const [visibleProducts, setVisibleProducts] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const [producto, setProducto] = useState({});
 
     // Maneja la apertura y cierre del modal
-    const handleModalToggle = () => setIsModalOpen(!isModalOpen);
+    const handleModalToggle = (selectedProducto = {}) => {
+        setIsModalOpen(!isModalOpen);
+        if (!isModalOpen) {
+            setProducto(selectedProducto); 
+        }
+    };
 
     // Mueve los productos a la izquierda
     const moveLeft = (e) => {
@@ -79,7 +85,7 @@ const Productos = ({ productos = [] }) => {
                         <FontAwesomeIcon icon={faChevronRight} />
                     </div>
 
-                    {isModalOpen && <FormularioContacto handleModalToggle={handleModalToggle} />}
+                    {isModalOpen && <Card handleModalToggle={handleModalToggle} producto={producto} />}
                 </>
             ) : (
                 <p className='no-productos'>No hay productos disponibles en este momento.</p>
