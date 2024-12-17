@@ -1,9 +1,10 @@
 /* Contenedor principal */
 .card-container {
     perspective: 1000px;
-    width: 300px;
+    width: 350px;
     height: 400px;
     margin: 0 12px;
+    margin-top: -50px;
 }
 
 .card {

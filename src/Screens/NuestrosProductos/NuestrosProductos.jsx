@@ -8,7 +8,7 @@ import cajonEspecial5 from '../../assets/CajonesEspeciales/CajonesEspeciales5.pn
 import Ultrabin200 from '../../assets/Ultra/Ultrabin200.png';
 import Ultrabin1000 from '../../assets/Ultra/Ultrabin1000.png';
 import Ultrabulk1300 from '../../assets/Ultra/Ultrabulk1300.png';
-import { faLayerGroup, faWeightHanging, faBoxesStacked } from '@fortawesome/free-solid-svg-icons';
+import { faLayerGroup, faWeightHanging, faBoxesStacked, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 import Productos from '../../Components/Productos/Productos';
 import './nuestrosProductos.css'
 import VideoComponent from '../../Components/VideoComponent/VideoComponent';
@@ -25,6 +25,7 @@ const PRODUCTOS = [
       { icon: faLayerGroup, description: 'Construcción sin costuras, hasta 8 capas de corrugado' },
       { icon: faWeightHanging, description: 'Soporta hasta 800 kg' },
       { icon: faBoxesStacked, description: 'Apilable hasta 2 unidades de altura' },
+      { icon: faLightbulb, description: 'Soluciones individuales para desafíos en el packaging de su Empresa' },
     ],
     ventajas: `El ULTRABIN 200 está fabricado con una manga de corrugado de 6 a 8 capas continuas, asegurando un empaque 
       resistente y sin costuras. Su diseño sin juntas ni remaches proporciona un interior liso, aumentando la resistencia 
@@ -35,25 +36,28 @@ const PRODUCTOS = [
   {
     id: 2,
     title: 'CAJONES ESPECIALES',
-    description: 'Contenedor especial para productos delicados',
+    description: 'Ofrecemos soluciones de alta calidad en envases de cartón corrugado, diseñados para los desafíos del packaging de su Empresa.',
     img: cajonEspecial1,
     features: [
       { icon: faLayerGroup, description: 'Fabricado en cartón de 2 capas resistente' },
       { icon: faWeightHanging, description: 'Resiste cargas moderadas, ideal para exportación' },
       { icon: faBoxesStacked, description: 'Apilable para facilitar el transporte' },
+      { icon: faLightbulb, description: 'Soluciones individuales para desafíos en el packaging de su Empresa' },
     ],
     ventajas: `Los Cajones Especiales están fabricados con cartón resistente de 2 capas, lo que les permite soportar cargas moderadas y ser adecuados para el transporte de productos delicados. Su construcción robusta los hace ideales para el envío de productos pesados y exportación, ofreciendo una solución confiable y de alta calidad.`,
     logistica: `Estos cajones son ideales para el almacenamiento y transporte de productos delicados y pesados. Su diseño apilable facilita el manejo y optimiza el espacio durante el transporte, asegurando que los productos lleguen de manera segura y económica, tanto en rutas locales como internacionales.`,
-  },  
+  },
+  
   {
     id: 3,
     title: 'CAJONES ESPECIALES',
-    description: 'Contenedor especial para productos delicados',
+    description: 'Ofrecemos soluciones de alta calidad en envases de cartón corrugado, diseñados para los desafíos del packaging de su Empresa.',
     img: cajonEspecial2,
     features: [
       { icon: faLayerGroup, description: 'Fabricado en cartón de 2 capas resistente' },
       { icon: faWeightHanging, description: 'Resiste cargas moderadas, ideal para exportación' },
       { icon: faBoxesStacked, description: 'Apilable para facilitar el transporte' },
+      { icon: faLightbulb, description: 'Soluciones individuales para desafíos en el packaging de su Empresa' },
     ],
     ventajas: `Los Cajones Especiales están fabricados con cartón resistente de 2 capas, lo que les permite soportar cargas moderadas y ser adecuados para el transporte de productos delicados. Su construcción robusta los hace ideales para el envío de productos pesados y exportación, ofreciendo una solución confiable y de alta calidad.`,
     logistica: `Estos cajones son ideales para el almacenamiento y transporte de productos delicados y pesados. Su diseño apilable facilita el manejo y optimiza el espacio durante el transporte, asegurando que los productos lleguen de manera segura y económica, tanto en rutas locales como internacionales.`,
@@ -61,38 +65,41 @@ const PRODUCTOS = [
   {
     id: 4,
     title: 'CAJONES ESPECIALES',
-    description: 'Contenedor especial para productos delicados',
+    description: 'Ofrecemos soluciones de alta calidad en envases de cartón corrugado, diseñados para los desafíos del packaging de su Empresa.',
     img: cajonEspecial3,
     features: [
       { icon: faLayerGroup, description: 'Fabricado en cartón de 2 capas resistente' },
       { icon: faWeightHanging, description: 'Resiste cargas moderadas, ideal para exportación' },
       { icon: faBoxesStacked, description: 'Apilable para facilitar el transporte' },
+      { icon: faLightbulb, description: 'Soluciones individuales para desafíos en el packaging de su Empresa' },
     ],
     ventajas: `Los Cajones Especiales están fabricados con cartón resistente de 2 capas, lo que les permite soportar cargas moderadas y ser adecuados para el transporte de productos delicados. Su construcción robusta los hace ideales para el envío de productos pesados y exportación, ofreciendo una solución confiable y de alta calidad.`,
     logistica: `Estos cajones son ideales para el almacenamiento y transporte de productos delicados y pesados. Su diseño apilable facilita el manejo y optimiza el espacio durante el transporte, asegurando que los productos lleguen de manera segura y económica, tanto en rutas locales como internacionales.`,
-  },
+   },
   {
     id: 5,
     title: 'CAJONES ESPECIALES',
-    description: 'Contenedor especial para productos delicados',
+    description: 'Ofrecemos soluciones de alta calidad en envases de cartón corrugado, diseñados para los desafíos del packaging de su Empresa.',
     img: cajonEspecial4,
     features: [
       { icon: faLayerGroup, description: 'Fabricado en cartón de 2 capas resistente' },
       { icon: faWeightHanging, description: 'Resiste cargas moderadas, ideal para exportación' },
       { icon: faBoxesStacked, description: 'Apilable para facilitar el transporte' },
+      { icon: faLightbulb, description: 'Soluciones individuales para desafíos en el packaging de su Empresa' },
     ],
     ventajas: `Los Cajones Especiales están fabricados con cartón resistente de 2 capas, lo que les permite soportar cargas moderadas y ser adecuados para el transporte de productos delicados. Su construcción robusta los hace ideales para el envío de productos pesados y exportación, ofreciendo una solución confiable y de alta calidad.`,
     logistica: `Estos cajones son ideales para el almacenamiento y transporte de productos delicados y pesados. Su diseño apilable facilita el manejo y optimiza el espacio durante el transporte, asegurando que los productos lleguen de manera segura y económica, tanto en rutas locales como internacionales.`,
-  }, 
+   }, 
   {
     id: 6,
     title: 'CAJONES ESPECIALES',
-    description: 'Contenedor especial para productos delicados',
+    description: 'Ofrecemos soluciones de alta calidad en envases de cartón corrugado, diseñados para los desafíos del packaging de su Empresa.',
     img: cajonEspecial5,
     features: [
       { icon: faLayerGroup, description: 'Fabricado en cartón de 2 capas resistente' },
       { icon: faWeightHanging, description: 'Resiste cargas moderadas, ideal para exportación' },
       { icon: faBoxesStacked, description: 'Apilable para facilitar el transporte' },
+      { icon: faLightbulb, description: 'Soluciones individuales para desafíos en el packaging de su Empresa' },
     ],
     ventajas: `Los Cajones Especiales están fabricados con cartón resistente de 2 capas, lo que les permite soportar cargas moderadas y ser adecuados para el transporte de productos delicados. Su construcción robusta los hace ideales para el envío de productos pesados y exportación, ofreciendo una solución confiable y de alta calidad.`,
     logistica: `Estos cajones son ideales para el almacenamiento y transporte de productos delicados y pesados. Su diseño apilable facilita el manejo y optimiza el espacio durante el transporte, asegurando que los productos lleguen de manera segura y económica, tanto en rutas locales como internacionales.`,
