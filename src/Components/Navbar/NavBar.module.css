@@ -47,7 +47,9 @@
   background-color: transparent; /* Fondo transparente */
   border: none; /* Elimina cualquier borde */
   box-shadow: none; /* Elimina cualquier sombra */
+  opacity: 020; /* Reduce la opacidad al 80% */
 }
+
 
 @media (max-width: 576px) {
   .logo {

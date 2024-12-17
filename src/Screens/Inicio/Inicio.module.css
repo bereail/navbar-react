@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh; /* Cambiado a min-height para mejor adaptación */
-    background-image: url('../../assets/fondo3.jpg');
+    background-image: url('../../assets/Fondo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,17 +14,21 @@
     animation: zoomInBackground 10s infinite alternate;  /* Añadir animación */
 }
 
-/* Estilos del overlay (capa de superposición) */
-.inicioOverlay {
+.inicioSection::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1); /* Fondo oscuro semitransparente */
-    z-index: 1; /* Asegura que el overlay esté debajo del contenido */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.05); /* Ajusta la opacidad para controlar el brillo */
+    z-index: 1; /* Asegura que el overlay esté detrás del contenido */
 }
 
+.inicioSection * {
+    position: relative; /* Asegura que el contenido esté encima del overlay */
+    z-index: 2;
+}
 .inicioContent h1 {
     font-size: 4.5rem;
     color: white;
@@ -78,10 +82,12 @@
     flex-wrap: wrap; /* Permite que los botones se ajusten en pantallas pequeñas */
 }
 
+
+
 .inicioButtonNaranja {
     padding: 15px 30px;
     background-color:#D2E965;
-    color: white;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -91,7 +97,7 @@
 }
 
 .inicioButtonNaranja:hover {
-    color: black;
+    color: white;
     background-color:  #0D6D95;
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -103,8 +109,8 @@
 
 .inicioButtonVerde {
     padding: 15px 30px;
-    background-color: #0D6D95;
-    color: white;
+    background-color:#D2E965;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -114,7 +120,8 @@
 }
 
 .inicioButtonVerde:hover {
-    background-color: #D2E965;
+    color: white;
+    background-color:  #0D6D95;
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
