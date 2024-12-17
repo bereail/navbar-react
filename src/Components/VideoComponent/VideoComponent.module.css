@@ -1,22 +1,108 @@
-.card {
-    border: 2px solid #0D6D95; 
-    margin-top: 20px;     /* Reducir el margen superior */
-    margin-bottom: 90px;
-    border-radius: 10px;   
-    padding: 5px;         
-    background-color: #f9f9f9; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    margin-top: 100px;     
-    max-width: 600px;      
-    text-align: center;   
-    margin-top: 65%;
+/* Estilos para el Contenedor Principal */
+.videoContainer {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    align-items: center;
 }
 
+/* Contenedor para el Título y el Video (lado a lado, pero el título a la derecha) */
+.videoSection {
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    gap: 20px; /* Espaciado entre el video y el título */
+    margin-bottom: 20px; /* Espacio entre la sección de video y el botón */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+/* Estilos para el Título */
+.workingTitle {
+    font-size: 2.5em;
+    color: #0D6D95;
+    font-weight: bold;
+    margin-top: 80px; /* Mueve el título un poco más abajo */
+    margin-bottom: 20px; /* Espacio inferior */
+    text-align: center;
+    order: 2; /* Asegura que el título esté después del video */
+    animation: moveTitle 3s ease-in-out infinite; /* Animación para el movimiento del título */
+}
+
+/* Animación para el Título (desplazamiento lateral) */
+@keyframes moveTitle {
+    0% { transform: translateX(-20px); opacity: 0; }
+    50% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(20px); opacity: 0; }
+}
+
+/* Estilos para el Contenedor de la Tarjeta */
+.card {
+    border: 2px solid #0D6D95;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+    max-width: 600px; /* Ajusta el tamaño máximo */
+    text-align: center;
+    margin-left: auto; /* Centra el contenedor horizontalmente */
+    margin-right: auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Estilos para el Video */
 .video {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    max-width: 80%;    
-    height: auto;        
-    border-radius: 8px;    
-    width: 100%;
+    max-width: 80%; /* Asegura que el video se ajuste al contenedor */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilos para el Contenedor del Botón */
+.buttonVideoContainer {
+    display: flex;
+    justify-content: center; /* Centra el botón */
+    margin-top: -10px; /* Separación superior del contenido anterior */
+    padding: 10px 5px; /* Espaciado lateral */
+}
+
+/* Estilos para el Botón "Conoce Más" */
+.btnConoceMas {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #0D6D95;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 580px; /* Ajuste el margen para mover el botón un poco más a la derecha */
+}
+
+.btnConoceMas:hover {
+    background-color: #0b5577; /* Cambia el color cuando el cursor pasa por encima */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    /* Ajuste del video y el título en pantallas pequeñas */
+    .videoSection {
+        flex-direction: column; /* Coloca los elementos uno debajo del otro */
+        gap: 10px; /* Reduce el espacio entre el video y el título */
+    }
+
+    .workingTitle {
+        font-size: 1.8em; /* Reduce el tamaño del título */
+        margin-top: 50px; /* Ajusta el margen superior */
+    }
+
+    .video {
+        max-width: 100%; /* Asegura que el video ocupe todo el ancho en pantallas pequeñas */
+    }
+
+    .btnConoceMas {
+        font-size: 14px; /* Ajusta el tamaño del botón */
+        padding: 8px 15px; /* Ajusta el tamaño del botón */
+        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+    }
 }

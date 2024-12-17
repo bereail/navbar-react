@@ -27,33 +27,42 @@
   margin-bottom: 80px;
 }
 
-/* Estilos para el botón */
-.button-container {
+.section-title {
   text-align: center;
-  margin-top: 20px;
-  /* Ajusta el margen según lo necesites */
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-.btn-conoce-mas {
-  padding: 10px 20px;
-  font-size: 16px;
-  color: white;
-  background-color: #0D6D95;
-  /* Color del botón */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+
+
+/* Diseño responsivo */
+@media (max-width: 860px) {
+  .section-productos-title {
+    font-size: 2.5em;
+  }
 }
 
-.btn-conoce-mas:hover {
-  background-color: #0b5577;
-  /* Color de fondo al pasar el cursor */
+@media (max-width: 768px) {
+  .button-container {
+    order: 2;
+  }
+  .video {
+    order: 1;
+  }
 }
+
+
 
 @media (max-width: 860px) {
 
   .section-productos-title {
     font-size: 2.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-video-container {
+    flex-direction: column;
   }
 }
