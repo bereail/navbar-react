@@ -1,7 +1,7 @@
 import React from 'react'
 import './Card.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleUp, faClose, faPlus, faPlusCircle, faTruckFast } from '@fortawesome/free-solid-svg-icons'
+import { faCircleUp, faClose, faTruckFast } from '@fortawesome/free-solid-svg-icons'
 
 const Card = ({ handleModalToggle, producto }) => {
   return (
