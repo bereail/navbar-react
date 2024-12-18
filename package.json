@@ -55,6 +55,7 @@
     ]
   },
   "devDependencies": {
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }
