@@ -16,16 +16,33 @@ import VideoComponent from '../../Components/VideoComponent/VideoComponent';
 const PRODUCTOS = [
   {
     id: 1,
+    title: 'ULTRABIN 1000',
+    description: 'Contenedor estándar de gran capacidad',
+    img: Ultrabin1000,
+    features: [
+      { icon: faLayerGroup, description: 'Construcción sin costuras, hasta 2 capas de corrugado' },
+      { icon: faWeightHanging, description: 'Soporta hasta 1200 lts/kg' },
+      { icon: faBoxesStacked, description: 'Apilable hasta 3 unidades de altura' },
+    ],
+      ventajas: `El ULTRABIN 1000 está  construido a partir de 2 capas de doble pared de cartón corrugado reforzado, lo que garantiza 
+      un empaque resistente y sin costuras. Su diseño sin juntas ni remaches ofrece un interior liso y mejora la resistencia 
+      al apilamiento. Hecho con fibra 100% renovable, es una opción sostenible para empaques al granel de líquidos.`,
+    logistica: `El ULTRABIN 1000 permite obtener un mayor rendimiento de los costos de transporte en comparación con el uso 
+      de tambores de 200 litros, ya que en el mismo espacio de carga permite enviar 200 litros más de producto por posición. 
+      En un equipo de 48 posiciones, se puede aprovechar un total de 9600 litros más de espacio con producto en cada uno de los envíos.`
+  },
+  {
+    id: 3,
     title: 'ULTRABIN 200',
     description: 'Contenedor de capacidad estándar, ideal para menor peso y volumen',
     img: Ultrabin200,
     features: [
-      { icon: faLayerGroup, description: 'Construcción sin costuras, hasta 8 capas de corrugado' },
-      { icon: faWeightHanging, description: 'Soporta hasta 800 kg' },
+      { icon: faLayerGroup, description: 'Construcción sin costuras, hasta 2 capas de corrugado' },
+      { icon: faWeightHanging, description: 'Soporta hasta 200 lts/kgs' },
       { icon: faBoxesStacked, description: 'Apilable hasta 2 unidades de altura' },
       { icon: faLightbulb, description: 'Soluciones individuales para desafíos en el packaging de su Empresa' },
     ],
-    ventajas: `El ULTRABIN 200 está fabricado con una manga de corrugado de 6 a 8 capas continuas, asegurando un empaque 
+    ventajas: `El ULTRABIN 200 está está  construido a partir de 2 capas de doble pared de cartón corrugado reforzado, asegurando un empaque 
       resistente y sin costuras. Su diseño sin juntas ni remaches proporciona un interior liso, aumentando la resistencia 
       al apilamiento. Hecho con fibra 100% renovable, es una opción más ligera y sostenible para empaques al granel de líquidos.`,
     logistica: `Perfecto para líquidos no peligrosos, el ULTRABIN 200 es resistente, fácil de manejar, ahorra espacio y es 
@@ -39,7 +56,7 @@ const PRODUCTOS = [
     img: Ultrabulk1300,
     features: [
       { icon: faLayerGroup, description: 'Construcción sin costuras, hasta 10 capas de corrugado' },
-      { icon: faWeightHanging, description: 'Soporta hasta 1200 kg' },
+      { icon: faWeightHanging, description: 'Soporta hasta 1300 lts/kgs' },
       { icon: faBoxesStacked, description: 'Apilable hasta 3 unidades de altura' },
     ],
     ventajas: `El ULTRABULK 1300 está fabricado con una manga de corrugado de 6 a 10 capas continuas que crea un empaque 
@@ -50,23 +67,7 @@ const PRODUCTOS = [
       fáciles de usar, ahorran espacio y son desechables, lo que facilita el envío y almacenamiento de líquidos y sólidos de manera 
       simple y económica. Su diseño permite una nueva perspectiva en el manejo de productos al granel, tanto líquidos como sólidos.`,
   },  
-  {
-    id: 3,
-    title: 'ULTRABIN 1000',
-    description: 'Contenedor estándar de gran capacidad',
-    img: Ultrabin1000,
-    features: [
-      { icon: faLayerGroup, description: 'Construcción sin costuras, hasta 10 capas de corrugado' },
-      { icon: faWeightHanging, description: 'Soporta hasta 1200 kg' },
-      { icon: faBoxesStacked, description: 'Apilable hasta 3 unidades de altura' },
-    ],
-      ventajas: `El ULTRABIN 1000 está fabricado con una manga de corrugado de 6 a 10 capas continuas, lo que garantiza 
-      un empaque resistente y sin costuras. Su diseño sin juntas ni remaches ofrece un interior liso y mejora la resistencia 
-      al apilamiento. Hecho con fibra 100% renovable, es una opción sostenible para empaques al granel de líquidos.`,
-    logistica: `El ULTRABIN 1000 permite obtener un mayor rendimiento de los costos de transporte en comparación con el uso 
-      de tambores de 200 litros, ya que en el mismo espacio de carga permite enviar 200 litros más de producto por posición. 
-      En un equipo de 48 posiciones, se puede aprovechar un total de 9600 litros más de espacio con producto en cada uno de los envíos.`
-  },
+  
   {
     id: 4,
     title: 'CAJONES ESPECIALES',
