@@ -45,7 +45,7 @@ function Nosotros() {
             className={`card-descripcion-empresa ${isCardVisible ? 'animate' : ''}`}
           >
             <p>
-              <strong>ULTRACORR SAS</strong> ULTRACOR SAS es una Empresa dedicada la fabricación de Envases especiales y a dar soluciones de packaging sostenible.
+              <strong>ULTRACORR SAS</strong> es una Empresa dedicada la fabricación de Envases especiales y a dar soluciones de packaging sostenible.
             </p>
             <p>
               Nuestros productos y servicios están dirigidos tanto al mercado local como al internacional, buscando satisfacer las demandas de un público diverso y exigente, manteniendo un compromiso constante con la excelencia y la mejora continua.
