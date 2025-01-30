@@ -1,7 +1,6 @@
 // Nosotros.js
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NosotrosEmpresa from '../../assets/fondo-nosotros.png';
 import './nosotros.css';
 import useObserver from '../../Hooks/useObserver';
 import MisionVision from '../../Components/MisionVision/MisionVision';

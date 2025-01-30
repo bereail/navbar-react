@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import styles from './Comercializacion.module.css';
 import { FaCheckCircle, FaBox, FaLeaf } from 'react-icons/fa';
 
@@ -49,3 +49,4 @@ const Comercializacion = () => {
 };
 
 export default Comercializacion;
+*/

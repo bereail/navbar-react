@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+/*import React, { useState, useEffect } from "react";
 import './Carousel.css'
 
 const Carousel = ({ images }) => {
@@ -26,3 +26,4 @@ const Carousel = ({ images }) => {
 
 
 export default Carousel;
+*/

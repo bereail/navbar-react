@@ -22,3 +22,67 @@ a {
 
 
 
+.containerEcoVentajas {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap; /* Para que se acomode en móviles */
+    padding: 40px;
+  }
+  
+  .cardEcoVentajas {
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 45%;
+    min-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .cardEcoVentajas:hover {
+    transform: scale(1.05);
+  }
+  
+  .titleCard {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #004aad;
+    font-weight: bold;
+  }
+  
+  .descriptionCard {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    text-align: left;
+  }
+  
+  .iconCard {
+    font-size: 48px;
+    color: #2b6a89;
+    margin-bottom: 15px;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .containerEcoVentajas {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cardEcoVentajas {
+      width: 90%;
+    }
+  
+    .titleCard {
+      font-size: 22px;
+    }
+  
+    .descriptionCard {
+      font-size: 16px;
+    }
+  }
+  

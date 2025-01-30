@@ -8,7 +8,6 @@ import Contacto from './Screens/Contacto/Contacto';
 import Sostenibilidad from './Screens/Sostenibilidad/Sostenibilidad';
 import NuestrosProductos from './Screens/NuestrosProductos/NuestrosProductos';
 import Comercializacion from './Screens/Comercializacion2/Comercializacion';
-import { Element } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 

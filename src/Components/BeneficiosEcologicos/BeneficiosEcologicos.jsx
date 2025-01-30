@@ -7,55 +7,28 @@ const BeneficiosEcologicos = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true); // Activar la animación cuando el componente se monta
+    setIsLoaded(true);
   }, []);
 
-
   const details = [
-    {
-      icon: faLeaf,
-      title: "ULTRACOR",
-      description: "Diseña productos que equilibran las necesidades del cliente y el cuidado del medio ambiente.",
-    },
-    {
-      icon: faRecycle,
-      title: "Materiales Reciclables",
-      description:
-        "Nuestros contenedores están hechos de cartón corrugado 100% reciclable, con adhesivos de base acuosa y bolsas de polímeros reciclables.",
-    },
-    {
-      icon: faTree,
-      title: "Suministro Responsable",
-      description:
-        "Trabajamos con proveedores de pallets certificados que obtienen su madera de bosques sostenibles.",
-    },
-    {
-      icon: faTruck,
-      title: "Reducción de Movimiento",
-      description: "Con ULTRABIN 1000, se requiere un 25% menos de viajes logísticos.",
-    },
-    {
-      icon: faCloud,
-      title: "Menor Huella de Carbono",
-      description:
-        "La reducción de viajes contribuye a disminuir la huella de carbono en un 25%.",
-    },
+    { icon: faLeaf, title: "ULTRACOR", description: "Diseña productos que equilibran el cliente y el medio ambiente." },
+    { icon: faRecycle, title: "Materiales Reciclables", description: "Nuestros contenedores están hechos de cartón 100% reciclable." },
+    { icon: faTree, title: "Suministro Responsable", description: "Proveedores de madera certificada y sostenible." },
+    { icon: faTruck, title: "Reducción de Movimiento", description: "Con ULTRABIN 1000, se requieren menos viajes logísticos." },
+    { icon: faCloud, title: "Menor Huella de Carbono", description: "Menos viajes = 25% menos de emisiones de CO₂." },
   ];
 
   return (
-    <div className={`${styles.largeCard} ${isLoaded ? styles.loaded : ''}`}>
-      <div>
-        <h2 className={styles.titleBeneficios}>Beneficios Ecológicos</h2>
-        {details.map((detail, index) => (
-          <p key={index} className={styles.description}>
-            <FontAwesomeIcon icon={detail.icon} className={styles.detailIcon} />{" "}
-            <strong>{detail.title}:</strong> {detail.description}
-          </p>
-        ))}
-
-      </div>
+    <div className={`${styles.cardEcoVentajas} ${isLoaded ? styles.loaded : ''}`}>
+      <h2 className={styles.titleCard}>Beneficios Ecológicos</h2>
+      {details.map((detail, index) => (
+        <p key={index} className={styles.descriptionCard}>
+          <FontAwesomeIcon icon={detail.icon} className={styles.iconCard} />{" "}
+          <strong>{detail.title}:</strong> {detail.description}
+        </p>
+      ))}
     </div>
   );
-}
+};
 
 export default BeneficiosEcologicos;
